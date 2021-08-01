@@ -1,0 +1,118 @@
+body{
+    background-image: url(https://wallpaperaccess.com/full/146770.png);
+    background-size: 350%;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 100%;
+    position: absolute;
+    top: 5vh;
+    left: 35vw;
+    text-align: center;
+}
+
+.leftside{
+    position: absolute;
+    width: 140px;
+    left: 8vw;
+    top: 25vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightside{
+    position: absolute;
+    width: 150px;
+    left: 50vw;
+    top: 25vh;    
+    display: flex;
+    flex-direction: column;
+}
+
+.botoncontinuar{
+    width: 150px;
+    height: 70px;
+    font-size: 30px;
+    position: absolute;
+    bottom: 20vh;
+    left: 25vw;
+}
+
+#checkbox2{
+    width: 268px;
+    position: relative;
+    left: 15vw;
+    top: 45vh;
+}
+
+#checkbox1{
+    width: 261px;
+    position:absolute;
+    left: 17vw;
+    top: 60vh;
+}
+
+footer{
+    position: absolute;
+    width: 320px;
+    height: 107px;
+    left: 10vw;
+    top: 145vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (min-width:768px){
+    body{
+        background-size: 100%;
+    }
+    .logo{
+        width: 200px;
+        height: 200px;
+        top: 5vh;
+        left: 45vw;
+    }
+    .leftside{
+        left: 38vw;
+        top: 35vh;
+    }
+    .rightside{
+        left: 55vw;
+        top: 35vh;
+    }
+    .botoncontinuar{
+        bottom: 25vh;
+        left: 46vw;
+    }
+
+    #checkbox2{
+        left: 55vw;
+        top: 55vh;
+    }
+    
+    #checkbox1{
+        left: 35vw;
+        top: 60vh;
+    }
+    footer{
+        left: 40vw;
+        top: 42vw;
+        text-align: justify;
+
+    }
+    .footerbuttons{
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    
+}

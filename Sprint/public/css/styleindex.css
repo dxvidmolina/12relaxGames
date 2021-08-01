@@ -1,0 +1,17 @@
+header{
+    background-color: blue;
+}
+#navbar{
+    width: 1028px;
+    height: 69px;
+
+}
+
+main{
+    background-image: url('https://images8.alphacoders.com/112/1123950.jpg');
+    background-position: 100%;
+    margin: 0px;
+}
+footer{
+    background-color: wheat;
+}
