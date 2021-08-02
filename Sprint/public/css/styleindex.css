@@ -1,17 +1,19 @@
-header{
-    background-color: blue;
+.menu{
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    left: 4px;
+    top: 19px;
 }
-#navbar{
-    width: 1028px;
-    height: 69px;
+#buscador{
+    position: absolute;
+    width: 275px;
+    height: 34px;
+    left: 54px;
+    top: 17px;
+    
+}
 
-}
+.navbar{
 
-main{
-    background-image: url('https://images8.alphacoders.com/112/1123950.jpg');
-    background-position: 100%;
-    margin: 0px;
-}
-footer{
-    background-color: wheat;
 }

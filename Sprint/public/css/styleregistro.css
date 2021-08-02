@@ -1,5 +1,8 @@
+/* #2924a896
+*/
 body{
-    background-image: url(https://wallpaperaccess.com/full/146770.png);
+    font-family: 'Roboto', sans-serif;
+    background-image: url(https://fondosmil.com/fondo/55755.jpg);
     background-size: 350%;
     background-position: center;
     background-repeat:no-repeat;
@@ -19,20 +22,41 @@ body{
 
 .leftside{
     position: absolute;
-    width: 140px;
-    left: 8vw;
-    top: 25vh;
+    width: 150px;
+    height: auto;
+    left: 2vw;
+    top: 23.5vh;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    transition: 350ms;
+}
+
+.leftside:hover{
+    transition: 350ms;
+    background-color: #efeb65;
 }
 
 .rightside{
     position: absolute;
-    width: 150px;
-    left: 50vw;
-    top: 25vh;    
+    width: 168px;
+    left: 51vw;
+    top: 23.5vh;    
     display: flex;
     flex-direction: column;
+    text-align: center;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    box-shadow: 150px #2824a8d0;
+    transition: 450ms;
+}
+
+.rightside:hover{
+    transition: 450ms;
+    background-color: #efeb65;
+
 }
 
 .botoncontinuar{
@@ -42,6 +66,12 @@ body{
     position: absolute;
     bottom: 20vh;
     left: 25vw;
+    background-color: #2824a8d0;
+}
+
+.botoncontinuar:hover{
+    transition: 450ms;
+    background-color: cyan ;
 }
 
 #checkbox2{
@@ -49,23 +79,59 @@ body{
     position: relative;
     left: 15vw;
     top: 45vh;
+    background-color: rgb(255, 255, 255);
+    opacity: 80%;
 }
 
 #checkbox1{
     width: 261px;
     position:absolute;
-    left: 17vw;
+    left: 15vw;
     top: 60vh;
+    background-color: rgb(255, 255, 255);
+    opacity: 80%;
 }
 
 footer{
     position: absolute;
-    width: 320px;
+    width: 350px;
     height: 107px;
     left: 10vw;
     top: 145vw;
     display: flex;
     flex-direction: column;
+}
+
+.footerbuttons div{
+    width: 40px;
+    height: 40px;
+    background-color:transparent;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.footerbuttons img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+
+}
+
+.footerbuttons{
+    position: absolute;
+    top: 6vh;
+    left: -3vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#titulofooter{
+    width: 330px;
+    background-color: whitesmoke;
+    opacity: 80%;
+    padding: auto;
 }
 
 
@@ -94,8 +160,8 @@ footer{
     }
 
     #checkbox2{
-        left: 55vw;
-        top: 55vh;
+        left: 52.5vw;
+        top: 54.9vh;
     }
     
     #checkbox1{
