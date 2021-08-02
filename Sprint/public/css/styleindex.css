@@ -1,0 +1,19 @@
+.menu{
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    left: 4px;
+    top: 19px;
+}
+#buscador{
+    position: absolute;
+    width: 275px;
+    height: 34px;
+    left: 54px;
+    top: 17px;
+    
+}
+
+.navbar{
+
+}
