@@ -67,6 +67,7 @@ body{
     bottom: 20vh;
     left: 25vw;
     background-color: #2824a8d0;
+    transition: 450ms;
 }
 
 .botoncontinuar:hover{
