@@ -1,5 +1,8 @@
 /* #2924a896
 */
+input[type=checkbox]{
+    transform: scale(2)
+}
 body{
     font-family: 'Roboto', sans-serif;
     background-image: url(https://fondosmil.com/fondo/55755.jpg);

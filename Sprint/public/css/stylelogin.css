@@ -1,6 +1,9 @@
 body{
     background-image: url(/images/background.jpg);
-    background-size: 80%;
+    background-size: 105%;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
     font-family: roboto;
 }
 .img-inition{
