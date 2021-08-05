@@ -24,6 +24,6 @@ Relax Games:
   Trello: https://trello.com/b/eJBadHh5/sprint-2-dh
   
 Guía:
--En una carpeta vacía iniciar GitBash y hacer "git clone https://github.com/mauroampuero/12relaxGames.git"
+-En una carpeta vacía iniciar GitBash y hacer "git clone https://github.com/imberzox/12relaxGames"
 -Una vez que se clonó completamente, ejecutar "node app.js" en GitBash o en la terminal del editor de código.
 -Utilizar /producto, /carrito, /login, /registro, /home. Según corresponda.
