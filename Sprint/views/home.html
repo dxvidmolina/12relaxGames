@@ -7,54 +7,52 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
         <link href="/css/stylehome.css" rel="stylesheet">
     </head>
     <body>
         <div class="fondo"></div>
-            <div class="navbar">
-               <div class="main-navbar">
-                <header>
-                    <div class="navbar">
-                       <div class="main-navbar">
-                            <a href="#">Inicio <i class="fas fa-home"></i> </a>
-                            <a href="#">Ingresar <i class="fas fa-sign-in-alt"></i> </a>
-                            <a href="#">Perfil <i class="fas fa-user"></i> </a>
-                            <a href="#">Comunidad <i class="fas fa-users"></i> </a>
-                            <a href="#">Soporte <i class="fas fa-tools"></i> </a>
-                            <a href="#">Carrito <i class="fas fa-shopping-cart"></i></a>
-                       </div>
-                    </div>
-                </header>
-               </div>
-            </div>
-
-            <main> 
-                <div class="banner"> <img src="/images/banner.PNG" alt="stylesheet"></div>
-                <h2>Tendencias</h2> 
-                <section class="tendencias">
-                    <div class="juegos">
-                        <img src="/images/Captura1.PNG" alt="stylesheet">
-                        <img src="/images/Captura2.PNG" alt="stylesheet">
-                        <img src="/images/Captura3.PNG" alt="stylesheet">
-                        <img src="/images/Captura1.PNG" alt="stylesheet">
-                        <img src="/images/Captura2.PNG" alt="stylesheet">
-                        <img src="/images/Captura3.PNG" alt="stylesheet">                       
-                      
-                    </div>
-                </section>
-                <h2>Descuentos</h2>
-                <section class="descuentos">
-                    <div class="juegos">
-                        <img src="/images/Captura1.PNG" alt="stylesheet">
-                        <img src="/images/Captura2.PNG" alt="stylesheet">
-                        <img src="/images/Captura3.PNG" alt="stylesheet">
-                        <img src="/images/Captura1.PNG" alt="stylesheet">
-                        <img src="/images/Captura2.PNG" alt="stylesheet">
-                        <img src="/images/Captura3.PNG" alt="stylesheet">
-                        
-                    </div>
-                </section>
-            </main>
+        <header>
+            <nav>
+                <div class="buscador"><input type="text"> <button type="submit"><i class="fas fa-search"></i></button></div>
+                <div class="nav-links">
+                    <a href="/Sprint/views/home.html"> <i class="fas fa-home"></i> Inicio</a>
+                    <a href="/Sprint/views/registro.html"> <i class="fas fa-user"></i> Log in</a>
+                    <a href="/Sprint/views/login.html"> <i class="fas fa-sign-in-alt"></i> Sign up</a>
+                    <a href="/Sprint/views/carrito.html"> <i class="fas fa-shopping-cart"></i> Carrito</a>
+                    <a href="#"> <i class="fas fa-wrench"></i> Soporte</a>
+                </div>
+            </nav>     
+        </header>      
+        <main> 
+            <div class="banner-padre"><a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><div class="banner"></div></a></div> 
+            <div class="titulo-padre"><h1 class="titulo">Juegos destacados</h1></div>
+            <section class="juegos-padre">
+                <div class="juegos">
+                    <div class="icono"><a href=""><i class="fas fa-arrow-circle-left"></i></a></div>
+                    <img src="/images/Captura1.PNG" alt="">
+                    <img src="/images/Captura2.PNG" alt="">
+                    <img src="/images/Captura3.PNG" alt="">
+                    <img src="/images/Captura1.PNG" alt="">
+                    <img src="/images/Captura2.PNG" alt="">
+                    <img src="/images/Captura3.PNG" alt="">
+                    <div class="icono"><a href=""><i class="fas fa-arrow-circle-right"></i></a></div>
+                </div>      
+            </section>           
+            
+            <div class="titulo-padre"><h1 class="titulo">Ofertas</h1></div>
+            <section class="juegos-padre">
+                <div class="juegos">
+                    <div class="icono"><a href=""><i class="fas fa-arrow-circle-left"></i></a></div>
+                    <img src="/images/Captura1.PNG" alt="">
+                    <img src="/images/Captura2.PNG" alt="">
+                    <img src="/images/Captura3.PNG" alt="">
+                    <img src="/images/Captura1.PNG" alt="">
+                    <img src="/images/Captura2.PNG" alt="">
+                    <img src="/images/Captura3.PNG" alt="">
+                    <div class="icono"><a href=""><i class="fas fa-arrow-circle-right"></i></a></div>
+                </div>      
+            </section>                      
+        </main>
     </body>
 </html>

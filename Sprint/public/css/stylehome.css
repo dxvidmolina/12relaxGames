@@ -2,136 +2,138 @@
     box-sizing:border-box;
     margin: 0%;
     padding: 0%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
 }
-@media (min-width:360px){
-    .fondo{
-        background-image: url(/images/1150d80e019d4563bda37eb4e48ee9bb.jpg);
+body::-webkit-scrollbar{
+    width: 0.50rem;
+}
+body::-webkit-scrollbar-track{
+    background: blueviolet;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(187, 30, 226);
+}
+.fondo{
+    background-image: url(/images/Vaporwave-4K-Wallpapers.jpg);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:blueviolet;
+    opacity: .7;
+    font-size: 10px;
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 10px;
+}
+.nav-links a{
+    margin-right: 2em;
+    text-decoration: none;
+    color: rgb(54, 0, 54);
+    font-weight: 700;
+    font-size: 1.7em;
+}
+.nav-links a:hover{
+    color: rgb(98, 0, 98);
+}
+.nav-links a i{
+    font-size: 1em;
+}
+.buscador{
+    margin-top: 2em;
+    font-size: 1em;
+}
+.buscador input{
+    width: 30vw;
+    height: 2.5em;
+    margin-right: 1em;
+}
+.buscador button{
+    transform: scale(1.5);
+}
+.banner{
+    background-image: url(/images/banner.PNG);
+    height: 20em;
+    width: 80vw;
+    margin-top: 6em;
+    border-radius: .5em;
+    box-shadow: 0 0 1em black;
+}
+.banner-padre{
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+.titulo-padre{
+    font-size: 10px;
+}
+.titulo{
+    text-align: left;
+    background-color: blueviolet;
+    display: inline-block;
+    margin-top: 6em;
+    margin-left: 2em;
+    padding: 1em;
+    border-radius: .5em;
+    font-weight: 400;
+    transition-duration: .5s;
+    font-size: 2em;
+}
+
+.titulo:hover{
+    transform: scale(1.1);
+}
+.juegos-padre{
+    font-size: 10px;
+}
+.juegos{
+    font-size: 1em;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6em;
+    align-items: center;
+}
+.juegos img{
+    box-shadow: 0 0 1.5em black;
+    transition-duration: .5s;
+}
+.juegos img:hover{
+    transform: scale(1.1);
+}
+.icono i{
+    font-size: 4em;
+    color: blueviolet;
+    filter: drop-shadow(0 0 1.5em black);
+    transition-duration: .3s;
+}
+
+.icono i:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width:390px){
+    *{
+        font-size: 20px;
+    }
+    body{
+        background-image: url(/images/Vaporwave-4K-Wallpapers.jpg);
         background-size: cover;
         background-position: center;
-        position: fixed;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
     }
-    .navbar{
-        width: 100%;
-        height: 79px;
-        box-shadow: 0px 0px 10px rgb(0, 0, 0);
-        top: 20px;
-        background-color: blueviolet;
-        position: fixed;
-    }
-    .main-navbar{   
-        margin-top: 30px;
-        text-align: center;
-    }
-    .main-navbar a{
-        text-align: center;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: 400;
-        margin: 0px 15px;
-        opacity: 1;
-        color: #2924a896;
-    }
-    .main-navbar a:hover{
-        color:#efeb65 ;
-    }
-    main{
-        margin-top: 100px;
-    }
-    .banner img{
-        width: 100%;
-    }
-    .tendencias{
-        padding: 5px;
-        display: flex;
-        background-color:#2924a896;
-    
-    }
-    .descuentos{
-        padding: 5px;
-        display: flex;
-        background-color:#2924a896;
-        margin-bottom: 10px;
-    }
-    .juegos{
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .juegos img{
-        margin-left: 10px;
-        width: 30vw;
-        height: 30vh;  
-        border-radius: 3px;
-        padding: 10px;
-    }
-    .juegos img:hover{
-        box-shadow:10px 10px 10px #f700ff96
-    }
-    h2{
-        margin-top: 10px;
-        background-color:#2824a8c5;
-        font-size: 20px;
-        padding: 5px;
-        color: rgb(255, 255, 255);
-        font-weight: 400;
-    }
-}
-@media (min-width:1200px){
-    .navbar-movil{
-        display: none;
-    }
-    .banner img{
-        height: 250px;
-    }
-    .juegos{
-        display: flex;
-    }
-    .juegos img{
-        margin-left: 10px;
-        width: 25%;
-        height: 30vh;  
-        border-radius: 3px;
-        padding: 10px;
-    }
-    .navbar{
-        z-index: 2;
-        width: 100%;
-        height: 79px;
-        box-shadow: 0px 0px 10px rgb(0, 0, 0);
-        background-color: blueviolet;
-        opacity: .9;
-        position: fixed;
-    }
-    .navbar:hover{
-        box-shadow:10px 10px 10px #f700ff96; 
-    }
-    .main-navbar{
-        text-align: center;
-        margin-top: 20px;
-    }
-    .main-navbar a{
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: 400;
-        margin: 0px 15px;
-        opacity: 1;
-        color: #2924a896;
-    }
-    .main-navbar a:hover{
-        color:#efeb65 ;
-    }
-    .hamburguer-button{
-        display: none;
-    }
-    input{
+
+    .fondo{
         display: none;
     }
 }
-
-
-
