@@ -21,8 +21,8 @@ Relax Games:
   
   Boceto en figma: https://www.figma.com/file/wioUGYUAVZQ3BzIatqFwLT/RelaxGames?node-id=0%3A1
 
-
-
+  Trello: https://trello.com/b/eJBadHh5/sprint-2-dh
+  
 Guía:
 -En una carpeta vacía iniciar GitBash y hacer "git clone https://github.com/mauroampuero/12relaxGames.git"
 -Una vez que se clonó completamente, ejecutar "node app.js" en GitBash o en la terminal del editor de código.
