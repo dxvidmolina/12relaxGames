@@ -16,8 +16,8 @@ body::-webkit-scrollbar-thumb{
 }
 .fondo{
     background-image: url(/images/Vaporwave-4K-Wallpapers.jpg);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     z-index: -1;
     background-size: cover;
@@ -30,6 +30,7 @@ nav{
     background-color:blueviolet;
     opacity: .7;
     font-size: 10px;
+    width: 100%;
 }
 .nav-links{
     display: flex;
@@ -54,14 +55,21 @@ nav{
 .buscador{
     margin-top: 2em;
     font-size: 1em;
+    background-color: white;
+    border-radius: 5px;
 }
 .buscador input{
     width: 30vw;
     height: 2.5em;
     margin-right: 1em;
+    border-radius: 5px;
+    border: 0px;
 }
 .buscador button{
     transform: scale(1.5);
+    border: 0px;
+    margin-right: 5px ;
+    background-color: white;
 }
 .banner{
     background-image: url(/images/banner.PNG);
