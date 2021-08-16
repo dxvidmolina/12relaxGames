@@ -10,7 +10,9 @@ const logger = require('morgan');
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 
-
+/*const adminAddRouter = require('');
+const adminRouter = require('');
+*/
 
 app.get('/carrito', (req, res) => {
     res.render('carrito')
