@@ -109,20 +109,24 @@ nav{
 .juegos{
     font-size: 1em;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 6em;
     align-items: center;
+
 }
 .juegos img{
     box-shadow: 0 0 1.5em black;
     transition-duration: .5s;
+    width: 100%;
+    border-radius: 15px;
 }
 .juegos img:hover{
     transform: scale(1.1);
 }
+
 .icono i{
     font-size: 4em;
-    color: blueviolet;
+    color: rgb(166, 84, 243);
     filter: drop-shadow(0 0 1.5em black);
     transition-duration: .3s;
 }
