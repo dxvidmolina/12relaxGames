@@ -7,8 +7,8 @@ const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const homeRouter = require('./routes/home');
-const usersRouter = require('./routes/users');
+const homeRouter = require('../routes/home');
+const usersRouter = require('../routes/users');
 
 /*const adminAddRouter = require('');
 const adminRouter = require('');
