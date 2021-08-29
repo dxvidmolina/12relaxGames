@@ -7,8 +7,10 @@ const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const homeRouter = require('../routes/home');
-const usersRouter = require('../routes/users');
+const homeRouter = require('./routes/home');
+const usersRouter = require('./routes/users');
+const registerRouter = require('./routes/register')
+
 
 /*const adminAddRouter = require('');
 const adminRouter = require('');
@@ -20,9 +22,7 @@ app.get('/carrito', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login')
 })
-app.get('/registro', (req, res) => {
-    res.render('registro')
-})
+
 app.get('/producto', (req, res) => {
     res.render('producto')
 })
@@ -32,6 +32,7 @@ app.get('/carga', (req, res) => {
 
 
 app.use('/', homeRouter);
+app.use('/registro', registerRouter)
 app.use('/users', usersRouter);
 
 app.set('views', path.join(__dirname, 'views'));

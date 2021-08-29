@@ -12,12 +12,11 @@
     
 </head>
 <body>
-    <header>
-    <p>Botón de volver</p>
-    <div class="logo"> <img src="/images/Logo rxgames.png" alt=""></div>
-    </header>
+    <%- include("./partials/header") %>
+    <main>
+        <div class="logo"> <img src="/images/Logo rxgames.png" alt=""></div>
     <div class="formularios">
-        <form action="registro.html" method="POST"></form>
+        <form action="/registro" method="POST">
         <div class="leftside">
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre" id="nombre">
@@ -25,14 +24,14 @@
             <label for="nickname">Nickname:</label>
             <input type="text" name="nickname" id="nickname">
 
-            <label for="Email">Email:</label>
+            <label for="email1">Email:</label>
             <input type="email" name="email1" id="email1">
 
             <label for="email">Repita email:</label>
             <input type="email" name="email" id="email">
         </div>
         <div class="rightside">
-            <label for="password">Contraseña:</label>
+            <label for="password1">Contraseña:</label>
             <input type="password" name="password1" id="password1">
 
             <label for="password">Confirmar :</label>
@@ -44,14 +43,14 @@
             <label for="edad"> Edad:</label>
             <input type="text" name="edad" id="edad">
         </div>
+        <button class="botoncontinuar" type="submit" > Continuar </button>
+        </form>
     </div>
        
-    <button class="botoncontinuar" type="submit">Continuar </button>
+  
 
     <div id="checkboxes">
         
-   
-    
         <div id="checkbox1">
         <input type="checkbox" name="Confirmar" value="si" id="caja1">
         <label for="newlestter"> Le gustaría recibir noticias o información acerca de relax games?</label>
@@ -63,20 +62,10 @@
         </div>
 
     </div>
-    </div>
 
-    <footer>
-        <p id="titulofooter">También puedes registrarte con otras cuentas:</p>
-        <div class="footerbuttons">
-            <div id="steamicon"><a href="https://store.steampowered.com/"><img src="https://e7.pngegg.com/pngimages/699/999/png-clipart-brand-logo-steam-gump-s.png" alt=""></a></div>
-            <div id="egicon"><a href="https://www.epicgames.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Epic_Games_logo.png" alt=""></a>  </div>
-            <div id="nintendoicon"><a href="https://www.nintendo.com/"><img src="https://w7.pngwing.com/pngs/868/467/png-transparent-nintendo-switch-gamecube-logo-nintendo-text-rectangle-nintendo.png" alt=""></a>  </div>
-            <div id="googleicon"><a href="https://www.google.com/"><img src="https://w7.pngwing.com/pngs/249/19/png-transparent-google-logo-g-suite-google-guava-google-plus-company-text-logo.png" alt=""></a>  </div>
-            <div id="facebookicon"><a href="https://www.facebook.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt=""></a>  </div>
-            <div id="psnicon"><a href="https://www.playstation.com/"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/PlayStation_logo.svg/1280px-PlayStation_logo.svg.png" alt=""></a>  </div>
-            <div id="appleicon"> <a href="https://www.apple.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png" alt=""></a>  </div>
-        </div>
-    </footer>
+    
+    </main>
+    <%- include("./partials/footer") %>
 </body>
             
 </html>

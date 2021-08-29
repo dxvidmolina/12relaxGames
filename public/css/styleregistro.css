@@ -1,12 +1,10 @@
-/* #2924a896
-*/
+
 
 *{
     box-sizing: border-box;
     padding: 0%;
     margin: 0%;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
     font-family: 'Roboto', sans-serif;
 }
 input[type=checkbox]{
@@ -14,32 +12,38 @@ input[type=checkbox]{
 }
 body{
     background-image: url("/images/1150d80e019d4563bda37eb4e48ee9bb.jpg");
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
-    background-repeat:no-repeat;
     background-attachment: fixed;
 
 }
 .logo{
-    position: absolute;
-    top: -3vh;
-    left: 1vw;
+    margin-top: 30px;
     text-align: center;
 }
 
+.logo img {
+    width: 33vw;
+}
+
+.formularios form{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px
+}
 
 .leftside{
-    position: absolute;
     width: 150px;
     height: auto;
-    left: 6vw;
-    top: 23.5vh;
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: rgba(255,255,255,0.8);
     padding: 10px;
     transition: 350ms;
+    margin: 20px;
 }
 
 .leftside:hover{
@@ -48,10 +52,7 @@ body{
 }
 
 .rightside{
-    position: absolute;
     width: 168px;
-    left: 51vw;
-    top: 23.5vh;    
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -59,6 +60,7 @@ body{
     padding: 10px;
     box-shadow: 150px #2824a8d0;
     transition: 450ms;
+    margin: 20px;
 }
 
 .rightside:hover{
@@ -71,11 +73,12 @@ body{
     width: 150px;
     height: 70px;
     font-size: 30px;
-    position: absolute;
-    bottom: 20vh;
-    left: 25vw;
     background-color: #ffffffd0;
     transition: 450ms;
+    padding: 10px;
+    padding-top: 15px;
+    margin: auto;
+    display: flex;
 }
 
 .botoncontinuar:hover{
@@ -83,11 +86,14 @@ body{
     background-color: cyan ;
 }
 
+#checkboxes{
+    display: flex;
+    justify-content: center;
+}
+
 #checkbox2{
     width: 268px;
-    position: relative;
-    left: 15vw;
-    top: 50vh;
+    margin: 20px;
     background-color: rgb(255, 255, 255);
     opacity: 80%;
     transition: 450ms;
@@ -100,73 +106,15 @@ body{
 
 #checkbox1{
     width: 261px;
-    position:absolute;
-    left: 15vw;
-    top: 60vh;
+    margin: 20px;
     background-color: rgb(255, 255, 255);
     opacity: 80%;
 }
-
-footer{
-    position: absolute;
-    width: 350px;
-    height: 107px;
-    left: 10vw;
-    top: 145vw;
-    display: flex;
-    flex-direction: column;
-}
-
-.footerbuttons div{
-    width: 40px;
-    height: 40px;
-    background-color:transparent;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap-reverse;
-    justify-content: space-between;
-}
-.footerbuttons img{
-    width: 100%;
-    height: auto;
-    margin: auto;
-}
-
-.footerbuttons{
-    position: absolute;
-    top: 6vh;
-    left: -3vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#titulofooter{
-    width: 330px;
-    background-color: whitesmoke;
-    opacity: 80%;
-    padding: auto;
-}
-
 
 
 @media (min-width:768px){
     body{
         background-size: 100%;
-    }
-    .logo{
-        width: 200px;
-        height: 200px;
-        top: -5vh;
-        left: 35vw;
-        text-align: center;
-    }
-    .logo img{
-        position: absolute;
-        top: 8vh;
-        left: 6vw;
-
     }
     .leftside{
         left: 38vw;
