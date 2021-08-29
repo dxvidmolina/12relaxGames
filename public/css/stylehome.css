@@ -135,7 +135,10 @@ nav{
     transform: scale(1.1);
 }
 
-
+footer{
+    width: 100%;
+    background-color: wheat;
+}
 
 @media (max-width:390px){
     *{

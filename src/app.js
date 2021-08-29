@@ -26,6 +26,9 @@ app.get('/registro', (req, res) => {
 app.get('/producto', (req, res) => {
     res.render('producto')
 })
+app.get('/carga', (req, res) => {
+    res.render('cargaYEdicion')
+})
 
 
 app.use('/', homeRouter);

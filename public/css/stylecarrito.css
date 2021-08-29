@@ -108,21 +108,7 @@ article.article3 {
     width: 100px;
     height: 50px;
 }
-footer{
-    background-color: rgba(125, 125, 125, 0.7);
-    font-size: 10px;
-    display: flex;
-    justify-content: space-around;
-    max-width: 400px;
-    margin: auto;
-    border-radius: 9px;
-}
-.footer-divs{
-    justify-content: space-between;
-    line-height: 7px;
-    text-align: center;
 
-}
 @media (min-width: 730px){
     .section2{
         justify-content: space-around;

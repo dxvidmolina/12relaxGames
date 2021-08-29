@@ -1,30 +1,38 @@
 /* #2924a896
 */
-body{
+
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
     font-family: 'Roboto', sans-serif;
-    background-image: url(https://fondosmil.com/fondo/55755.jpg);
-    background-size: 350%;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+input[type=checkbox]{
+    transform: scale(2)
+}
+body{
+    background-image: url("/images/1150d80e019d4563bda37eb4e48ee9bb.jpg");
+    background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
     background-attachment: fixed;
 
 }
 .logo{
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
-    border-radius: 100%;
     position: absolute;
-    top: 5vh;
-    left: 35vw;
+    top: -3vh;
+    left: 1vw;
     text-align: center;
 }
+
 
 .leftside{
     position: absolute;
     width: 150px;
     height: auto;
-    left: 2vw;
+    left: 6vw;
     top: 23.5vh;
     display: flex;
     flex-direction: column;
@@ -36,7 +44,7 @@ body{
 
 .leftside:hover{
     transition: 350ms;
-    background-color: #efeb65;
+    background-color: #8b8b8b;
 }
 
 .rightside{
@@ -55,7 +63,7 @@ body{
 
 .rightside:hover{
     transition: 450ms;
-    background-color: #efeb65;
+    background-color: #8b8b8b;
 
 }
 
@@ -66,7 +74,7 @@ body{
     position: absolute;
     bottom: 20vh;
     left: 25vw;
-    background-color: #2824a8d0;
+    background-color: #ffffffd0;
     transition: 450ms;
 }
 
@@ -79,9 +87,15 @@ body{
     width: 268px;
     position: relative;
     left: 15vw;
-    top: 45vh;
+    top: 50vh;
     background-color: rgb(255, 255, 255);
     opacity: 80%;
+    transition: 450ms;
+}
+
+#checbox2:enabled{
+    transition: 450ms;
+    background-color: green;
 }
 
 #checkbox1{
@@ -110,13 +124,13 @@ footer{
     border-radius: 50%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap:wrap-reverse;
+    justify-content: space-between;
 }
 .footerbuttons img{
     width: 100%;
     height: auto;
     margin: auto;
-
 }
 
 .footerbuttons{
@@ -144,8 +158,15 @@ footer{
     .logo{
         width: 200px;
         height: 200px;
-        top: 5vh;
-        left: 45vw;
+        top: -5vh;
+        left: 35vw;
+        text-align: center;
+    }
+    .logo img{
+        position: absolute;
+        top: 8vh;
+        left: 6vw;
+
     }
     .leftside{
         left: 38vw;
@@ -162,7 +183,7 @@ footer{
 
     #checkbox2{
         left: 52.5vw;
-        top: 54.9vh;
+        top: 58.4vh;
     }
     
     #checkbox1{
