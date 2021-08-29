@@ -2,6 +2,7 @@ const express= require('express');
 const app = express();
 const path = require('path');
 const publicPath = path.resolve(__dirname, "./public");
+const multer= require('multer');
 
 const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
@@ -9,6 +10,7 @@ const logger = require('morgan');
 
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
+const productoController = require('./controllers/crearProductos');
 
 /*const adminAddRouter = require('');
 const adminRouter = require('');
@@ -26,10 +28,6 @@ app.get('/registro', (req, res) => {
 app.get('/producto', (req, res) => {
     res.render('producto')
 })
-app.get('/carga', (req, res) => {
-    res.render('cargaYEdicion')
-})
-
 
 app.use('/', homeRouter);
 app.use('/users', usersRouter);
