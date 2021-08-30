@@ -20,8 +20,8 @@ const productoController=
                 productToEdit: product
             });
         },
-        upload: (req, res) => {
-            let products_copy = Products.getAll().map(product => {
+        update: (req, res) => {
+            let products_copy = Products.getAll().map(function(product){
                     if (product.id == req.params.id) {
                         product.nombreJuego = req.body.nombreJuego
                         product.precio = req.body.precio
@@ -32,14 +32,8 @@ const productoController=
                 });
     
             Products.modifiedAll(products_copy);
-            res.redirect('/producto/edit'+ req.params.id)
-    
-        },
-        destroy : (req, res) => {
-            let products_copy = Products.getAll().filter(elem => elem.id != req.params.id);
-            Products.modifiedAll(products_copy);
-            res.redirect('/');
-        },
+            res.redirect("/products/"+req.params.id)
+         }
     }
         
 module.exports= productoController;
