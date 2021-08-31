@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const Products = require('../models/product')
 function findAll(){
     let todosProductos = fs.readFileSync(path.join(__dirname, "../data/arrayProductos.json"))
     let data = JSON.parse(todosProductos)
@@ -26,13 +27,8 @@ const productoController=
                 productToEdit: product
             });
         },
-<<<<<<< HEAD
             upload: (req, res) => {
             let products_copy = Products.getAll().map(product => {
-=======
-        update: (req, res) => {
-            let products_copy = Products.getAll().map(function(product){
->>>>>>> f0f29262d4c21cfd5c2cb745e351cbdf48cc4e4f
                     if (product.id == req.params.id) {
                         product.nombreJuego = req.body.nombreJuego
                         product.precio = req.body.precio
@@ -43,8 +39,7 @@ const productoController=
                 });
     
             Products.modifiedAll(products_copy);
-<<<<<<< HEAD
-            res.redirect('/producto/edit'+ req.params.id)
+            res.redirect('/products/'+ req.params.id)
     
         },
             destroy: (req, res) => {
@@ -70,10 +65,6 @@ const productoController=
         let productos = findAll();
         res.render("lista", {productos : productos})
         },
-=======
-            res.redirect("/products/"+req.params.id)
-         }
->>>>>>> f0f29262d4c21cfd5c2cb745e351cbdf48cc4e4f
     }
         
 module.exports= productoController;

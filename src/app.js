@@ -11,12 +11,8 @@ const logger = require('morgan');
 
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
-<<<<<<< HEAD
 const productRouter = require('./routes/producto');
-=======
 const registerRouter = require('./routes/register')
-const productRouter = require('./routes/producto')
->>>>>>> f0f29262d4c21cfd5c2cb745e351cbdf48cc4e4f
 
 /*const adminAddRouter = require('');
 const adminRouter = require('');
@@ -28,23 +24,8 @@ app.get('/carrito', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login')
 })
-app.get('/registro', (req, res) => {
-    res.render('registro')
-})
-<<<<<<< HEAD
 
 
-app.use('/', homeRouter);
-app.use('/users', usersRouter);
-app.use('/producto', productRouter)
-
-=======
-
-app.use('/carga', (req, res) => {
-    res.render('cargaYEdicion')
-})
-
->>>>>>> f0f29262d4c21cfd5c2cb745e351cbdf48cc4e4f
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

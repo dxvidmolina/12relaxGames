@@ -4,7 +4,7 @@ const path = require("path");
 function writeJson(array){
     let arrayJson = JSON.stringify(array);
 
-    return false.writeFileSync(path.join(__dirname, "../data/user.json", arrayJson))
+    return fs.writeFileSync(path.join(__dirname, "../data/user.json"), arrayJson)
 }
 
 function findAll(){
