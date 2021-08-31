@@ -49,8 +49,10 @@ const productoController=
         },
             entrarproducto: (req,res)=>{
             res.render("producto");       
+        },  create: (req,res)=>{
+            res.render("crearProducto")
         },
-             create: function(req, res){
+             storage: function(req, res){
                 let arrayProductos = {
                 name: req.body.name,
                 price: req.body.price,
@@ -58,7 +60,7 @@ const productoController=
                 desc: req.body.price,
                 img: req.body.img
         }
-        res.redirect("../listaProducto");
+        res.redirect("crearProducto");
     
         },
             list: function(req, res){
