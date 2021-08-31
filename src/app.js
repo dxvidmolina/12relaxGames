@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const publicPath = path.resolve(__dirname, "./public");
 const multer= require('multer');
+const methodOverride = require('method-override');
 
 const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
@@ -10,7 +11,7 @@ const logger = require('morgan');
 
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
-const productoController = require('./controllers/crearProductos');
+const productRouter = require('./routes/producto');
 
 /*const adminAddRouter = require('');
 const adminRouter = require('');
@@ -25,16 +26,16 @@ app.get('/login', (req, res) => {
 app.get('/registro', (req, res) => {
     res.render('registro')
 })
-app.get('/producto', (req, res) => {
-    res.render('producto')
-})
+
 
 app.use('/', homeRouter);
 app.use('/users', usersRouter);
+app.use('/producto', productRouter)
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(methodOverride("_method"));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
