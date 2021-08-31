@@ -11,7 +11,12 @@ const logger = require('morgan');
 
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
+<<<<<<< HEAD
 const productRouter = require('./routes/producto');
+=======
+const registerRouter = require('./routes/register')
+const productRouter = require('./routes/producto')
+>>>>>>> f0f29262d4c21cfd5c2cb745e351cbdf48cc4e4f
 
 /*const adminAddRouter = require('');
 const adminRouter = require('');
@@ -26,12 +31,20 @@ app.get('/login', (req, res) => {
 app.get('/registro', (req, res) => {
     res.render('registro')
 })
+<<<<<<< HEAD
 
 
 app.use('/', homeRouter);
 app.use('/users', usersRouter);
 app.use('/producto', productRouter)
 
+=======
+
+app.use('/carga', (req, res) => {
+    res.render('cargaYEdicion')
+})
+
+>>>>>>> f0f29262d4c21cfd5c2cb745e351cbdf48cc4e4f
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -41,12 +54,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(express.static("public"));
 
+app.use('/', homeRouter);
+app.use('/users', usersRouter);
+app.use('/products', productRouter)
+app.use('/registro', registerRouter)
+
 app.use(function(req, res, next) {
-  next(createError(404));
-});
+    next(createError(404));
+  });
 
 app.use(function(err, req, res, next) {
 
