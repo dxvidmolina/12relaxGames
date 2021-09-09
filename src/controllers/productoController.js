@@ -58,7 +58,7 @@ const productoController=
                 desc: req.body.price,
                 img: req.body.img
         }
-        res.redirect("../listaProducto");
+        res.redirect("lista");
     
         },
             list: function(req, res){

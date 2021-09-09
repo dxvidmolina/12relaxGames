@@ -15,18 +15,18 @@
     <section class="articulos">
         <% productos.forEach(function(productos){ %>
             <article>
-                <div>
-                    <p>imagen</p>
+                <div class="imagen">
                     <img src="/images/<%=productos.img%>" alt="">
                 </div>
-                <div>
-                    <p>info del juego</p>
+               <div class="parametrosFlex">
+                <div class="parametros">
                     <ul>
                         <li>Nombre: <%= productos.nombreJuego %>  </li>
                         <li>Descuento: <%=productos.descuento  %>  </li>
                         <li>Precio: $ <%=productos.precio %>  </li>
                     </ul>
                 </div>
+               </div>
             </article>
         <% }) %>
     </section>
