@@ -16,10 +16,15 @@
         
 </header>
 <main>
-    <form action='' method=''>
+    <form action='/login' method='POST'>
         <div class='form-in'>
             <label>Correo electrónico:</label>
             <input type='email' name='email' placeholder="login@relaxgames.com">
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %>
+                </div>
+            <% } %>
         </div>
         <div class='form-in'>
             <label>Contraseña:</label>
