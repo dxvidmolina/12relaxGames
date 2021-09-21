@@ -14,6 +14,7 @@ p{
 }
 .parteIzquierda{
     font-size: 20px;
+<<<<<<< HEAD
     list-style: none;
     display: inline-block;
     margin-right: 20px;
@@ -22,6 +23,16 @@ p{
     font-size: 20px;
     list-style: none;
     display: inline-block;
+=======
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+.parteDerecha{
+    font-size: 20px;
+    list-style: none;
+    display: inline-block;
+>>>>>>> 04a901278b53a012f03775ff0a74729c92b023da
     margin-left: 20px;
 }
 .todo{
@@ -44,6 +55,11 @@ footer{
     margin-top: 10%;
     background-color: rgba(0, 0, 0, 0.178);
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 04a901278b53a012f03775ff0a74729c92b023da
 @media (min-width:768px) {
     *{
         font-size: 13px;

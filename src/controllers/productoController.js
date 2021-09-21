@@ -60,7 +60,11 @@ const productoController=
                 desc: req.body.price,
                 img: req.body.img
         }
+<<<<<<< HEAD
+        res.redirect("lista");
+=======
         res.redirect("crearProducto");
+>>>>>>> f946b0a154870448f6db28dfd8cfb3b7f70a6942
     
         },
             list: function(req, res){
