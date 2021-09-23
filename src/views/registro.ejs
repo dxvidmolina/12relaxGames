@@ -16,34 +16,41 @@
     <main>
         <div class="logo"> <img src="/images/Logo rxgames.png" alt=""></div>
     <div class="formularios">
-        <form action="/registro" method="POST">
+        <form action="/registro/registro" method="POST" >
         <div class="leftside">
             <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre">
+            <input type="text" name="nombre" id="nombre" required>
 
             <label for="nickname">Nickname:</label>
-            <input type="text" name="nickname" id="nickname">
+            <input type="text" name="nickname" id="nickname" required>
 
             <label for="email1">Email:</label>
-            <input type="email" name="email1" id="email1">
+            <input type="email" name="email1" id="email1" required>
 
             <label for="email">Repita email:</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
         </div>
         <div class="rightside">
             <label for="password1">Contraseña:</label>
-            <input type="password" name="password1" id="password1">
+            <input type="password" name="password1" id="password1" required>
 
             <label for="password">Confirmar :</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" required>
 
             <label for="pais"> País:</label>
-            <input type="text" name="pais" id="pais">
+            <input type="text" name="pais" id="pais" required>
         
             <label for="edad"> Edad:</label>
-            <input type="text" name="edad" id="edad">
+            <input type="text" name="edad" id="edad" required>
         </div>
     </div>
+    <div class="errorForm">
+    <% if (typeof errorMessage != "undefined") { %>
+        <p>El form no se pudo entregar por un error:</p>
+        <p><%= errorMessage %></p>
+    <% } %>
+    </div>
+
 
     <div id="checkboxes">
         

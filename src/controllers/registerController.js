@@ -1,15 +1,15 @@
 const fs = require("fs");
 const path = require("path");
+const bcrypt = require('bcryptjs');
 
 function writeJson(array){
     let arrayJson = JSON.stringify(array);
 
-    return false.writeFileSync(path.join(__dirname, "../data/user.json", arrayJson))
+    return fs.writeFileSync(path.join(__dirname, "../data/user.json"), arrayJson)
 }
 
 function findAll(){
     let usuarioJson= fs.readFileSync(path.join(__dirname, "../data/user.json"))
-
     let data = JSON.parse(usuarioJson)
     return data 
 }
@@ -22,7 +22,7 @@ const registerController={
 
     guardarUsuario: (req, res) => {
         let usuarios = findAll()
-
+        let passwordEncriptar = bcrypt.hashSync(req.body.password, 10);
         let nuevoUsuario = {
             id: usuarios.length + 1,
             nombre: req.body.nombre,
@@ -30,17 +30,32 @@ const registerController={
             email: req.body.email,
             pais: req.body.pais,
             edad: req.body.edad,
-            password: req.body.password
+            password: passwordEncriptar
         }
-        let usuariosActualizados = [...usuarios, nuevoUsuario]
-
-        writeJson(usuariosActualizados)
-
-        res.redirect("/")
-    }
-
-
-}
+        if (req.body.email1==req.body.email && req.body.password == req.body.password1){
+            let usuarioCheck = findAll().find(function(element) {
+                return element.email == nuevoUsuario.email});
+    
+            for (i=0; i=findAll().length; i++){
+                console.log(usuarioCheck)
+                if (usuarioCheck == null){
+                    let usuariosActualizados = [...usuarios, nuevoUsuario]
+                    writeJson(usuariosActualizados)
+                    res.redirect("/login")
+                }
+                else{
+                    res.redirect("/registro")
+                }
+           }
+        }
+    
+        else{
+            res.render("registro.ejs"), {
+            errorMessage: "Su email o contraseña no coinciden"
+            }
+        }
+    }}
+        
 
 
 
