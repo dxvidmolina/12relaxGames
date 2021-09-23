@@ -3,7 +3,7 @@ const router= express.Router();
 
 const registerController= require ("../controllers/registerController.js")
 
-router.get ("/registro", registerController.crearUsuario);
-router.post ("/registro", registerController.guardarUsuario);
+router.get ("/", registerController.crearUsuario);
+router.post ("/", registerController.guardarUsuario);
 
 module.exports = router;

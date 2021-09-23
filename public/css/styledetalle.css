@@ -12,6 +12,7 @@ body{
     background-position:center ;
     z-index: -1;
 }
+
 .navbar{
     z-index: 2;
     display: flex;
@@ -46,11 +47,12 @@ main{
     top: 100px;
 }
 .contenedor{
-    width: 90%;
+    width: 90vw;
     margin: 40px;
+    max-width: 500px;
 }
 .contenedor img{
-    width: 100%;
+    width: 90%;
     border-radius: 7px;
 }
 .juego1{
@@ -97,6 +99,10 @@ main{
     height: 40px;
     background-color:#f700ff96;
     border: 1;
+}
+.todo{
+    display: flex;
+    flex-wrap: wrap;
 }
 .precio{
     background-color:#f700ff96;

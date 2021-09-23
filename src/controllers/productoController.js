@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const Products = require('../models/product')
 function findAll(){
     let todosProductos = fs.readFileSync(path.join(__dirname, "../data/arrayProductos.json"))
     let data = JSON.parse(todosProductos)
@@ -13,7 +14,8 @@ const productoController=
                 res.render('detail',{
                     product: product,
                 });
-            }else{
+            }
+            else{
                 res.redirect('/')
             }
         },
@@ -26,8 +28,8 @@ const productoController=
                 productToEdit: product
             });
         },
-        update: (req, res) => {
-            let products_copy = Products.getAll().map(function(product){
+            upload: (req, res) => {
+            let products_copy = Products.getAll().map(product => {
                     if (product.id == req.params.id) {
                         product.nombreJuego = req.body.nombreJuego
                         product.precio = req.body.precio
@@ -38,7 +40,7 @@ const productoController=
                 });
     
             Products.modifiedAll(products_copy);
-            res.redirect('/producto/edit'+ req.params.id)
+            res.redirect('/products/'+ req.params.id)
     
         },
             destroy: (req, res) => {
@@ -48,8 +50,10 @@ const productoController=
         },
             entrarproducto: (req,res)=>{
             res.render("producto");       
+        },  create: (req,res)=>{
+            res.render("crearProducto")
         },
-             create: function(req, res){
+             storage: function(req, res){
                 let arrayProductos = {
                 name: req.body.name,
                 price: req.body.price,
@@ -57,7 +61,7 @@ const productoController=
                 desc: req.body.price,
                 img: req.body.img
         }
-        res.redirect("../listaProducto");
+        res.redirect("crearProducto");
     
         },
             list: function(req, res){

@@ -4,16 +4,21 @@ const path = require('path');
 const publicPath = path.resolve(__dirname, "./public");
 const multer= require('multer');
 const methodOverride = require('method-override');
+const session = require('express-session')
 
-
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false
+}));
 const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
+const productRouter = require('./routes/producto');
 const registerRouter = require('./routes/register')
-const productRouter = require('./routes/producto')
 
 /*const adminAddRouter = require('');
 const adminRouter = require('');
@@ -21,22 +26,6 @@ const adminRouter = require('');
 
 app.get('/carrito', (req, res) => {
     res.render('carrito')
-})
-app.get('/login', (req, res) => {
-    res.render('login')
-})
-app.get('/registro', (req, res) => {
-    res.render('registro')
-})
-
-
-app.use('/', homeRouter);
-app.use('/users', usersRouter);
-app.use('/producto', productRouter)
-
-
-app.use('/carga', (req, res) => {
-    res.render('cargaYEdicion')
 })
 
 app.set('views', path.join(__dirname, 'views'));
@@ -51,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static("public"));
 
 app.use('/', homeRouter);
-app.use('/users', usersRouter);
+app.use('/login', usersRouter);
 app.use('/products', productRouter)
 app.use('/registro', registerRouter)
 
