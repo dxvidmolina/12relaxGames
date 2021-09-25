@@ -43,6 +43,7 @@ app.use('/', homeRouter);
 app.use('/login', usersRouter);
 app.use('/products', productRouter)
 app.use('/registro', registerRouter)
+app.get("/perfil",(req,res)=>res.render("perfil"))
 
 app.use(function(req, res, next) {
     next(createError(404));

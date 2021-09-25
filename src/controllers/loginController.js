@@ -1,4 +1,5 @@
 const User = require("../models/users.js")
+const bcryptjs = require("bcryptjs")
 const loginController={
     entrarLogin:(req,res)=>{
         res.render("login")
@@ -7,7 +8,8 @@ const loginController={
     process: (req, res) => {
         let userToLogin = User.findByField('email', req.body.email);
 		if(userToLogin){
-            if(userToLogin.password === req.body.password){
+            let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if(passwordCorrect){
                 return res.redirect("/")
             } 
             return res.render('login',{
