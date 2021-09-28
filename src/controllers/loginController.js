@@ -1,17 +1,25 @@
 const User = require("../models/users.js")
 const bcryptjs = require("bcryptjs")
+const { validationResult } = require("express-validator")
 const loginController={
     entrarLogin:(req,res)=>{
         res.render("login")
         
     },
-    process: (req, res) => {
+    processLogin: (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty){
+
+        }else {
+            return res.render('login', {errors: errors.errors})
+        }
         let userToLogin = User.findByField('email', req.body.email);
 		if(userToLogin){
             let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if(passwordCorrect){
+                let userLogued = userToLogin;
                 return res.redirect("/")
-            } 
+            }
             return res.render('login',{
                 errors: {
                     email: {
@@ -19,8 +27,9 @@ const loginController={
                     }
                 }
             })
-
+            
         }
+        req.session.userToLogin = userLogued;
         return res.render('login',{
             errors: {
                 email: {
