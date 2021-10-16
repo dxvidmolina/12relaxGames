@@ -40,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static("public"));
 
 app.use('/', homeRouter);
+
 app.use('/login', usersRouter);
 app.use('/products', productRouter)
 app.use('/registro', registerRouter)

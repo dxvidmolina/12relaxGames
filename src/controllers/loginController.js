@@ -17,8 +17,8 @@ const loginController={
 		if(userToLogin){
             let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if(passwordCorrect){
-                let userLogued = userToLogin;
-                return res.redirect("/")
+                let userLogued = (userToLogin == true);
+                return res.redirect("/perfil")
             }
             return res.render('login',{
                 errors: {

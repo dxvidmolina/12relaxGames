@@ -1,8 +1,8 @@
 function guestMiddleware(req, res, next){
-    if (req.session.userToLogin == undefined) {
+    if (req.session.userToLogin != undefined) {
         next();
     }else{
-        res.render("home")
+        res.render("login")
     }
 }
 
