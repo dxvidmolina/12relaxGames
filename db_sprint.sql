@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `sprints`;
-USE `sprints`;
+CREATE DATABASE IF NOT EXISTS `db_sprint`;
+USE `db_sprint`;
 -- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
 --
 -- Host: localhost    Database: sprit4-db

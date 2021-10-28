@@ -5,12 +5,13 @@ const publicPath = path.resolve(__dirname, "./public");
 const multer= require('multer');
 const methodOverride = require('method-override');
 const session = require('express-session')
-
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
 app.use(session({
 	secret: "Shhh, It's a secret",
 	resave: false,
 	saveUninitialized: false
 }));
+app.use(userLoggedMiddleware)
 const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -18,7 +19,8 @@ const logger = require('morgan');
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/producto');
-const registerRouter = require('./routes/register')
+const registerRouter = require('./routes/register');
+const { use } = require('./routes/register');
 
 /*const adminAddRouter = require('');
 const adminRouter = require('');
@@ -44,11 +46,10 @@ app.use('/', homeRouter);
 app.use('/login', usersRouter);
 app.use('/products', productRouter)
 app.use('/registro', registerRouter)
-app.get("/perfil",(req,res)=>res.render("perfil"))
 
 app.use(function(req, res, next) {
-    next(createError(404));
-  });
+  next(createError(404));
+});
 
 app.use(function(err, req, res, next) {
 

@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Users';
+    let alias = 'User';
     let cols = {
         Usuario_id:{
             type: DataTypes.INTEGER,
@@ -31,17 +31,23 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        Productos_id_fk:{
-            type: DataTypes.INT,
-            type: DataTypes.FOREIGNKEY,
+        Productos_id:{
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     };
     let config = {
-        tableName: "movies",
+        tableName: "usuarios",
         timestamps: false
     }
         
 const Users = sequelize.define(alias, cols, config)
+Users.associate = function(models){
+    Users.hasMany(models.Producto,{
+        as : "productos",
+        foreingKey: "Productos_id"
+})
+}
 
     return Users;
 }
