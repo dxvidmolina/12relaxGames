@@ -1,17 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
 
-    let alias = 'Productos';
+    let alias = 'Producto';
     let cols = {
-        Productos_id:{
+        id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
-        } ,
-        Usuario_id:{
-            type: DataTypes.INTEGER,
-            allowNull: false
-        } ,
+        },
         Productos_date:{
 
             type: DataTypes.DATE,
@@ -36,13 +32,18 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         } ,
+        Detalle_producto:{
+
+            type: DataTypes.STRING,
+            allowNull: false
+        }
     };
     let config = {
-        tableName: "Productos",
+        tableName: "productos",
         timestamps: false
     }
         
-const Usuario = sequelize.define(alias, cols, config)
+const Producto = sequelize.define(alias, cols, config)
 
-    return Usuario;
+    return Producto;
 }
