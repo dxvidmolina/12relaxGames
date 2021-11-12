@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        Usuario_país:{
+        Usuario_pais:{
             type: DataTypes.STRING,
             allowNull: false
         },

@@ -7,7 +7,7 @@ const authMiddleware = require("../middlewares/authMiddleware")
 /* GET users listing. */
 router.get('/', guestMiddleware,loginController.entrarLogin);
 router.post('/', loginController.processLogin)
-router.get('/perfil',authMiddleware, loginController.profile)
+router.get('/perfil', loginController.profile)
 router.get("/logout", loginController.logout)
 
 
