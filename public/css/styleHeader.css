@@ -12,7 +12,10 @@ nav{
     background-color:blueviolet;
     opacity: .98;
     font-size: 10px;
-    width: 100%;
+    max-width: 100%;
+}
+.nav-links a:last-child{
+    margin-right: 0;
 }
 
 #HRcolor {
