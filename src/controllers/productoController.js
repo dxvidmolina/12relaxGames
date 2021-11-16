@@ -66,11 +66,15 @@ const productoController=
         res.redirect("crearProducto");
     
         },
-        /* list: function(req, res){
+        'list': (req, res) => {
             db.Producto.findAll()
-            .then(function(productos){
-             return res.render("lista", {productos : productos})
-            })}*/
+                .then(producto => {
+                    res.render('lista', {producto : producto})
+                })
+                .catch(error => {
+                    console.log("error")
+                })
+        }
 }
         
 module.exports= productoController;

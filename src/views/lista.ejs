@@ -13,17 +13,17 @@
     </div>
 
     <section class="articulos">
-        <% productos.forEach(function(productos){ %>
+        <% producto.forEach(function(producto){ %>
             <article>
                 <div class="imagen">
-                    <img src="/images/<%=productos.img%>" alt="">
+                    <img src="/productos/Producto_img/<%=producto.img%>" alt="">
                 </div>
                <div class="parametrosFlex">
                 <div class="parametros">
                     <ul>
-                        <li>Nombre: <%= productos.nombreJuego %>  </li>
-                        <li>Descuento: <%=productos.descuento  %>  </li>
-                        <li>Precio: $ <%=productos.precio %>  </li>
+                        <li>Nombre: <%= producto.nombreJuego %>  </li>
+                        <li>Descuento: <%=producto.descuento  %>  </li>
+                        <li>Precio: $ <%=producto.precio %>  </li>
                     </ul>
                 </div>
                </div>
