@@ -1,8 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const Products = require('../models/product')
-let db= require("../../database/models")
+let db= require("../../database/models");
+const e = require('express');
 const sequelize = db.sequelize;
+
 function findAll(){
     let todosProductos = fs.readFileSync(path.join(__dirname, "../data/arrayProductos.json"))
     let data = JSON.parse(todosProductos)
@@ -66,6 +68,7 @@ const productoController=
         res.redirect("crearProducto");
     
         },
+<<<<<<< HEAD
         'list': (req, res) => {
             db.Producto.findAll()
                 .then(producto => {
@@ -75,6 +78,14 @@ const productoController=
                     console.log("error")
                 })
         }
+=======
+         list: function(req, res){
+            db.Producto.findAll()
+            .then(function(productos){
+             return res.render("lista", {productos : productos})
+            .catch(alert)
+            })}
+>>>>>>> 66bee905b840bb0b81116b63b49c9776a4d7bcc9
 }
         
 module.exports= productoController;
