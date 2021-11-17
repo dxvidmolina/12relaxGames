@@ -10,7 +10,12 @@ module.exports = (sequelize, DataTypes) => {
         },
         Productos_date:{
 
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
+            allowNull: false
+        } ,
+        Productos_desc:{
+
+            type: DataTypes.STRING,
             allowNull: false
         } ,
         Productos_descuento:{
@@ -32,7 +37,22 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         } ,
-        Detalle_producto:{
+        Productos_imgHome1:{
+
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        Productos_imgHome2:{
+
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        Productos_imgHome3:{
+
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        Productos_imgHome4:{
 
             type: DataTypes.STRING,
             allowNull: false

@@ -30,10 +30,6 @@ module.exports = (sequelize, DataTypes) => {
         Usuario_password:{
             type: DataTypes.STRING,
             allowNull: false
-        },
-        Productos_id:{
-            type: DataTypes.INTEGER,
-            allowNull: false
         }
     };
     let config = {
@@ -42,12 +38,7 @@ module.exports = (sequelize, DataTypes) => {
     }
         
 const Users = sequelize.define(alias, cols, config)
-Users.associate = function(models){
-    Users.hasMany(models.Producto,{
-        as : "productos",
-        foreingKey: "Productos_id"
-})
-}
+
 
     return Users;
 }

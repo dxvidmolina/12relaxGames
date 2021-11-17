@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styleregistro.css">
+    <link rel="stylesheet" href="/css/styleerrores.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -47,13 +48,48 @@
         
             <label for="edad"> Edad:</label>
             <input type="text" name="edad" id="edad">
+            <input type="text" name="nombre" id="nombre" >
+
+            <label for="nickname">Apellido:</label>
+            <input type="text" name="nickname" id="nickname" >
+
+            <label for="email1">Email:</label>
+            <input type="email" name="email1" id="email1" >
+
+            <label for="email">Repita email:</label>
+            <input type="email" name="email" id="email" >
+        </div>
+        <div class="rightside">
+            <label for="password1">Contraseña:</label>
+            <input type="password" name="password1" id="password1" >
+
+            <label for="password">Confirmar :</label>
+            <input type="password" name="password" id="password" >
+
+            <label for="pais"> País:</label>
+            <select name="pais" id="pais">
+                <option value="Argentina">Argentina</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Perú">Perú</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Guyana">Guyana</option>
+
+            </select>
+                
+            <label for="edad"> Edad:</label>
+            <input type="text" name="edad" id="edad" >
         </div>
     </div>
-    <div class="errorForm">
-    <% if (typeof errorMessage != "undefined") { %>
-        <p>El form no se pudo entregar por un error:</p>
-        <p><%= errorMessage %></p>
-    <% } %>
+    <div class="errores">
+        <ul>
+            
+        </ul>
     </div>
 
 
@@ -75,7 +111,9 @@
     
     </main>
     <%- include("./partials/footer") %>
+    <script src="/js/registro.js"></script>
 </body>
+
             
 </html>
 

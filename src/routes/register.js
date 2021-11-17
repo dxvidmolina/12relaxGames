@@ -8,7 +8,7 @@ const validateRegister =[
     check("email1").isEmail().withMessage("Ingrese un Mail valido"),
     check("email").isEmail(),
     check("password").notEmpty().bail().isLength({min: 8}).withMessage("Ingrese una contraseña valida"),
-    check("password1").notEmpty().bail().isLength({min: 8})
+    check("password1").notEmpty().bail().isLength({min: 8}),
 ];
 
 router.get ("/",guestMiddleware, registerController.crearUsuario);
