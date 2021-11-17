@@ -1,19 +1,20 @@
 window.addEventListener("load",function(){
  window.addEventListener("submit",function(e){
+    let errores = []
     let form = document.querySelector("form");
     let nombre = document.querySelector("#nombre");
     if(nombre.value.length < 2){
         errores.push("El campo necesita al menos tres caracteres")
         
-    }else if (nombre.value == "" || nombre.value == null){
+    }else if (nombre.value == ""){
         errores.push("El campo está vacio")
         
     }
     let email = document.querySelector("#email");
-    if(email.value.length < 6){
+    if(email.value== "" || email.value == null){
         errores.push("El campo necesita al menos siete caracteres")
         
-    }else if (email.value == "" || email.value == null){
+    }else if (email.value.length <2){
         errores.push("El campo está vacio")
         
     }
@@ -43,13 +44,13 @@ window.addEventListener("load",function(){
         errores.push("Este campo está vacio")
     }
 
-    let errores = []
     
     if (errores.length > 0){
+        console.log(errores)
         e.preventDefault();
         let ulError = document.querySelector(".errores ul")
         errores.forEach(error => {
-            ulError.innerHTML += '<li>' + errores +  '</li>'
+            ulError.innerHTML += '<li>' + error +  '</li>'
         })
     }
 })
