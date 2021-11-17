@@ -19,29 +19,34 @@
         <form action="/registro" method="POST" >
         <div class="leftside">
             <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" required>
-
+            <input type="text" name="nombre" id="nombre">
+            <% if(locals.errores && errores.nombre)  { %>
+                <p class="errores">
+                    <%=errores.nombre%>
+                </p>
+            <% } %>
+            
             <label for="nickname">Nickname:</label>
-            <input type="text" name="nickname" id="nickname" required>
+            <input type="text" name="nickname" id="nickname">
 
             <label for="email1">Email:</label>
-            <input type="email" name="email1" id="email1" required>
+            <input type="email" name="email1" id="email1">
 
             <label for="email">Repita email:</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email">
         </div>
         <div class="rightside">
             <label for="password1">Contraseña:</label>
-            <input type="password" name="password1" id="password1" required>
+            <input type="password" name="password1" id="password1">
 
             <label for="password">Confirmar :</label>
-            <input type="password" name="password" id="password" required>
+            <input type="password" name="password" id="password">
 
             <label for="pais"> País:</label>
-            <input type="text" name="pais" id="pais" required>
+            <input type="text" name="pais" id="pais">
         
             <label for="edad"> Edad:</label>
-            <input type="text" name="edad" id="edad" required>
+            <input type="text" name="edad" id="edad">
         </div>
     </div>
     <div class="errorForm">

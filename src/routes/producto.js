@@ -3,10 +3,11 @@ const router= express.Router();
 const productoController= require ("../controllers/productoController.js");
 const guestMiddleware = require("../middlewares/guestMiddleware.js");
 const authMiddleware = require("../middlewares/authMiddleware") 
-const registerController= require ("../controllers/registerController.js")
+const registerController= require ("../controllers/registerController.js");
+const { check } = require("express-validator");
 const validateCreate =[
-    body("name").notEmpty().isLenght({min: 5}).withMessage("Ingresar un nombre valido"),
-    body("desc").isLenght({min: 20}).withMessage("Ingresar una descripcion de al menos 20 caracteres"),
+    check("name").notEmpty().isLength({min: 5}).withMessage("Ingresar un nombre valido"),
+    check("desc").isLength({min: 20}).withMessage("Ingresar una descripcion de al menos 20 caracteres"),
 ];
 
 

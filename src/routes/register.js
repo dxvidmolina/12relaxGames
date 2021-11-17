@@ -1,14 +1,14 @@
 const express= require ("express");
 const router= express.Router();
 const guestMiddleware = require("../middlewares/guestMiddleware");
-const { body } = require("express-validator");
+const { check } = require("express-validator");
 const registerController= require ("../controllers/registerController.js")
 const validateRegister =[
-    body("nombre").notEmpty().isLenght({min: 5}).withMessage("Ingresar un nombre valido"),
-    body("email1").isMail().withMessage("Ingrese un Mail valido"),
-    body("email").isMail(),
-    body("password").notEmpty().isLenght({min: 8}).withMessage("Ingrese una contraseña valida"),
-    body("password1").notEmpty()
+    check("nombre").notEmpty().withMessage("Ingrese un nombre").bail().isLength({min: 5}).withMessage("Ingresar un nombre valido"),
+    check("email1").isEmail().withMessage("Ingrese un Mail valido"),
+    check("email").isEmail(),
+    check("password").notEmpty().bail().isLength({min: 8}).withMessage("Ingrese una contraseña valida"),
+    check("password1").notEmpty().bail().isLength({min: 8})
 ];
 
 router.get ("/",guestMiddleware, registerController.crearUsuario);

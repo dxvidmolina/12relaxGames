@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require('bcryptjs');
+const { validationResult } = require("express-validator")
 
 function writeJson(array){
     let arrayJson = JSON.stringify(array);
@@ -21,6 +22,10 @@ const registerController={
     },
 
     guardarUsuario: (req, res) => {
+        let errores = validationResult(req);
+        if (!errores.isEmpty()){
+            return res.render ("registro",{mensajesDeError: errores.mapped()})
+        }
         let usuarios = findAll()
         let passwordEncriptar = bcrypt.hashSync(req.body.password, 10);
         let nuevoUsuario = {
