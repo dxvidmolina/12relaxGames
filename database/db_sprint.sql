@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
 --
--- Host: localhost    Database: sprint_db
+-- Host: localhost    Database: db_sprint
 -- ------------------------------------------------------
--- Server version	5.5.5-10.4.21-MariaDB
+-- Server version	5.5.5-10.4.20-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -35,6 +35,8 @@ CREATE TABLE `genres` (
 
 LOCK TABLES `genres` WRITE;
 /*!40000 ALTER TABLE `genres` DISABLE KEYS */;
+INSERT INTO `genres` VALUES (1,'Acción');
+
 /*!40000 ALTER TABLE `genres` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -124,7 +126,7 @@ LOCK TABLES `users` WRITE;
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'sprint_db'
+-- Dumping routines for database 'db_sprint'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -136,4 +138,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-17  0:05:31
+-- Dump completed on 2021-11-18 20:36:51

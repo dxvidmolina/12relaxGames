@@ -6,63 +6,35 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
+            allowNull: false 
+        },
+        name:{
+            type: DataTypes.INTEGER(20),
+            allowNull: false 
+        },
+        price:{
+            type: DataTypes.INTEGER(11),
             allowNull: false
         },
-        Productos_date:{
-
-            type: DataTypes.STRING,
-            allowNull: false
-        } ,
-        Productos_desc:{
-
-            type: DataTypes.STRING,
-            allowNull: false
-        } ,
-        Productos_descuento:{
-            type: DataTypes.INTEGER,
-            allowNull: false
-        } ,
-        Productos_nombre:{
-
-            type: DataTypes.STRING,
-            allowNull: false
-        } ,
-        Productos_precio:{
-
-            type: DataTypes.INTEGER,
-            allowNull: false
-        } ,
-        Productos_img:{
-
-            type: DataTypes.STRING,
-            allowNull: false
-        } ,
-        Productos_imgHome1:{
-
-            type: DataTypes.STRING,
+        description:{
+            type: DataTypes.STRING(480),
             allowNull: false
         },
-        Productos_imgHome2:{
-
-            type: DataTypes.STRING,
-            allowNull: false
+        discount:{
+            type: DataTypes.INTEGER(20)
         },
-        Productos_imgHome3:{
-
-            type: DataTypes.STRING,
-            allowNull: false
+        genre_id:{
+            type: DataTypes.INTEGER
         },
-        Productos_imgHome4:{
-
-            type: DataTypes.STRING,
-            allowNull: false
+        imgref:{
+            type: DataTypes.INTEGER
         }
-    };
+
+    }
     let config = {
-        tableName: "productos",
+        tableName: 'productos',
         timestamps: false
     }
-        
 const Producto = sequelize.define(alias, cols, config)
 
     return Producto;

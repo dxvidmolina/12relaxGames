@@ -16,58 +16,47 @@
     <%- include("./partials/header") %>
     <main>
         <div class="logo"> <img src="/images/Logo rxgames.png" alt=""></div>
+
+         <div class="errores">
+                <% if(locals.errores) { %>
+                    <% errores.forEach(error => { %> 
+                    <p> <%=error.msg%> </p>
+                <% }) %>
+                <% } %> 
+            </div>
     <div class="formularios">
+
         <form action="/registro" method="POST" >
-        <div class="leftside">
-            <label for="nombre">Nombre:</label>
+
+        <div class="forms">    
+            <p id="tip">Los espacios con (*) son obligatorios</p>           
+            <label for="nombre">(*)Nombre:</label>
             <input type="text" name="nombre" id="nombre">
-            <% if(locals.errores && errores.nombre)  { %>
-                <p class="errores">
-                    <%=errores.nombre%>
-                </p>
-            <% } %>
-            
+
+            <label for="nickname">(*)Apellido:</label>
+            <input type="text" name="apellido" id="Apellido" >                       
+
+            <label for="email1">(*)Email:</label>
+            <input type="email" name="email1" id="email1" >
+
+            <label for="email">(*)Confirmar:</label>
+            <input type="email" name="email" id="email" >
+
+            <label for="password1">(*)Contraseña:</label>
+            <input type="password" name="password1" id="password1" >
+
+            <label for="password">(*)Confirmar:</label>
+            <input type="password" name="password" id="password" >
+
             <label for="nickname">Nickname:</label>
             <input type="text" name="nickname" id="nickname">
 
-            <label for="email1">Email:</label>
-            <input type="email" name="email1" id="email1">
-
-            <label for="email">Repita email:</label>
-            <input type="email" name="email" id="email">
-        </div>
-        <div class="rightside">
-            <label for="password1">Contraseña:</label>
-            <input type="password" name="password1" id="password1">
-
-            <label for="password">Confirmar :</label>
-            <input type="password" name="password" id="password">
-
-            <label for="pais"> País:</label>
-            <input type="text" name="pais" id="pais">
-        
             <label for="edad"> Edad:</label>
-            <input type="text" name="edad" id="edad">
-            <input type="text" name="nombre" id="nombre" >
-
-            <label for="nickname">Apellido:</label>
-            <input type="text" name="nickname" id="nickname" >
-
-            <label for="email1">Email:</label>
-            <input type="email" name="email1" id="email1" >
-
-            <label for="email">Repita email:</label>
-            <input type="email" name="email" id="email" >
-        </div>
-        <div class="rightside">
-            <label for="password1">Contraseña:</label>
-            <input type="password" name="password1" id="password1" >
-
-            <label for="password">Confirmar :</label>
-            <input type="password" name="password" id="password" >
-
+            <input type="text" name="edad" id="edad"> 
+            
             <label for="pais"> País:</label>
             <select name="pais" id="pais">
+                               
                 <option value="Argentina">Argentina</option>
                 <option value="Uruguay">Uruguay</option>
                 <option value="Brasil">Brasil</option>
@@ -80,10 +69,8 @@
                 <option value="Venezuela">Venezuela</option>
                 <option value="Guyana">Guyana</option>
 
-            </select>
-                
-            <label for="edad"> Edad:</label>
-            <input type="text" name="edad" id="edad" >
+            </select>         
+
         </div>
     </div>
     <div class="errores">
@@ -91,7 +78,6 @@
             
         </ul>
     </div>
-
 
     <div id="checkboxes">
         
@@ -106,12 +92,14 @@
         </div>
     </div>
 
-    <button class="botoncontinuar" type="submit" > Continuar </button>
-     </form>
+        <button class="botoncontinuar" type="submit" > Continuar </button>
+    </form>
     
     </main>
     <%- include("./partials/footer") %>
-    <script src="/js/registro.js"></script>
+
+    <!--- <script src="/js/registro.js"></script> --->
+
 </body>
 
             

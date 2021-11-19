@@ -1,5 +1,20 @@
 .errores{
+    position: relative;
+    left: 40px;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: fit-content;
+    background-color: rgba(102, 0, 0, 0.801);
     font-size: 20px;
     border-radius: 9px;
     color: red;
+    border-color: red;
+
+}
+
+@media (min-width:768px){
+    .errores{
+        position: relative;
+        left: 44.8vw
+    }
 }

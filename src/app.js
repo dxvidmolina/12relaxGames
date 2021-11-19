@@ -43,6 +43,9 @@ app.use(express.static("public"));
 
 app.use('/', homeRouter);
 
+app.get('/buendia', function(req,res){
+  res.render('hola')
+})
 app.use('/login', usersRouter);
 app.use('/products', productRouter)
 app.use('/registro', registerRouter)
