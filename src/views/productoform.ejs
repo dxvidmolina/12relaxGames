@@ -14,7 +14,13 @@
   </head>
   <body>
     <%- include("partials/header.ejs") %> 
-
+    <div class="errores">
+      <% if(locals.errores) { %>
+          <% errores.forEach(error => { %> 
+          <p> <%=error.msg%> </p>
+      <% }) %>
+      <% } %> 
+  </div>
     <h1>Editar Juego:"<%= productToEdit.nombreJuego %> "</h1>
 
     <main >
