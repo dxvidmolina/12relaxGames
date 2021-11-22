@@ -1,4 +1,5 @@
-window.addEventListener("load",function(){
+
+ window.addEventListener("load",function(){
  window.addEventListener("submit",function(e){
     let errores = []
     let form = document.querySelector("form");

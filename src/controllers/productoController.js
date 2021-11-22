@@ -13,6 +13,12 @@ function findAll(){
 const productoController=
         {
             detail: (req, res) => {
+            let errores = validationResult(req);
+            if (!errores.isEmpty()){
+                    console.log(errores)
+                return res.render ('registro', {errores: errores.array()})
+                res.redirect("crearProducto");
+                }
             let product = Products.findById(req.params.id)
             if(product){
                 res.render('detail',{
