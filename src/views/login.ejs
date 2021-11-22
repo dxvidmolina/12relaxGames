@@ -3,6 +3,7 @@
 <head>
     <%- include("./partials/head") %>
     <link href="/css/stylelogin.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleerrores.css">
 
 </head>
 
@@ -16,10 +17,12 @@
         
 </header>
 <main>
-    <form action='/login' method='POST'>
-        <div class='form-in'>
+    <form action='/login' method='POST' id="formularioo">
+        <div class='form-in' id='hola'>
             <label>Correo electrónico:</label>
-            <input type='email' name='email' placeholder="login@relaxgames.com">
+            <input type='text' name='email' placeholder="login@relaxgames.com" class='validation'>
+            <div class='validacionCorreo'></div>
+
             <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
                     <%= errors.email.msg %>
@@ -28,7 +31,8 @@
         </div>
         <div class='form-in'>
             <label>Contraseña:</label>
-            <input type='password' name='password' placeholder="Contraseña">
+            <input type='password' name='password' placeholder="Contraseña" class='validation1'>
+            <div class='validationContrasenia'></div>
         </div>
         <div class='bottons'><button type="reset" >Borrar</button>
         <button type="submit" >Ingresar</button>
@@ -51,6 +55,7 @@
     </form>
 </main>
 <%- include("./partials/footer") %>
+<script src="/js/login.js"></script>
 </body>
 
 </html>

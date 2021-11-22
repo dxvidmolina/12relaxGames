@@ -3,3 +3,6 @@
     border-radius: 9px;
     color: red;
 }
+.wrong{
+ border: solid 1px red;
+}

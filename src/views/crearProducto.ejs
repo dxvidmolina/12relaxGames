@@ -15,23 +15,28 @@
             <h2>Bienvenido a la sección de creación de productos</h2>
             <form action="/producto/crearProducto" method="POST">
                 <label for="name"></label>
-                    <input type="text" placeholder="Nombre del juego" name="name" id="">
+                    <input type="text" placeholder="Nombre del juego" name="name" id="nombreJuego">
+                    <div class= 'nombreJuego'></div>
 
                 <label for="price"></label>
-                    <input type="number" placeholder="Precio" name="price" id="">
+                    <input type="number" placeholder="Precio" name="price" id="precio">
+                    <div class= 'precio' ></div>
 
                 <label for="genre"></label>
-                    <input type="text" placeholder="Género" name="genre" id="">
+                    <input type="text" placeholder="Género" name="genre" id="genre">
+                    <div class = 'genre'></div>
 
                 <label for="Desc"></label>
-                    <input type="text" placeholder="Desc. del producto" name="Desc" id="">
+                    <input type="text" placeholder="Desc. del producto" name="Desc" id="description">
+                    <div class='description'></div>
                     
                 <label for="img"></label>
-                    <input type="file" name="img" id="">
+                    <input type="file" name="img" id="img">
                     <p>Recuerda que solo puedes vender productos físicos en tu país(o ciudad)</p>
                     <input type="submit" name="submit" id="">
             </form>
         </div>
     </section>
+    <script src='/js/create.js'></script>
 </body>
 </html>

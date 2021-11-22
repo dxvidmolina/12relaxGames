@@ -25,6 +25,7 @@
           <div class="form-edit">
             <label for="nombreJuego">Nombre Juego:</label>
             <input type="text"  value="<%= productToEdit.nombreJuego %>" name="nombreJuego" id="nombreJuego">
+            <div class='input' id='danger'></div>
           </div>
           
           <div class="form-edit" >
@@ -35,6 +36,7 @@
           <div class="form-edit">
             <label for="detalleJuego">Detalle Producto:</label>
             <input type="text" value="<%= productToEdit.detalleJuego %>" name="detalleJuego" id="detalleJuego">
+            <div class='description' id='danger'></div>
           </div>
 
           <div class="form-edit">
@@ -58,6 +60,6 @@
         
     </main>
     <%- include("partials/footer.ejs") %> 
-
+    <script src='/js/edit.js'></script>
   </body>
 </html>
