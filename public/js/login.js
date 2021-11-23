@@ -5,14 +5,13 @@
  let validationCorreo = document.querySelector('.validacionCorreo')
  let validationContrasenia = document.querySelector('.validationContrasenia')
  form.addEventListener('submit',(e)=>{
-     e.preventDefault()
     if((emailCorrecto.test(inputCorreo.value))=== false){
         (validationCorreo.innerHTML='Debe ser un correo') && (e.preventDefault())
     }else{
         (validationCorreo.innerHTML='')
     }
     if(inputPassword.value.length<= 7){
-        (validationContrasenia.innerHTML= 'Debe tener al menos 8 caracteristicas') && e.preventDefault()
+        (validationContrasenia.innerHTML= 'Debe tener al menos 8 caracteristicas') && (e.preventDefault())
     }else{
         validationContrasenia.innerHTML=''
     }

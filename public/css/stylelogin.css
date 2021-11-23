@@ -80,6 +80,12 @@ input{
 .text-danger{
     color: red;
 }
+.validacionCorreo{
+    color: red
+}
+.validationContrasenia{
+    color: red
+}
 
 @media (min-width: 730px) {
     .main-navbar{

@@ -41,6 +41,9 @@ body{
 .inputs input{
     margin: 20px;
 }
+#danger{
+    color:red
+}
 
 
 @media (min-width: 360px){
