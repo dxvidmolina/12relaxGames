@@ -75,10 +75,10 @@ DROP TABLE IF EXISTS `productos`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) NOT NULL,
+  `name` varchar(70) NOT NULL,
   `price` int(11) NOT NULL,
   `description` varchar(480) NOT NULL,
-  `discount` int(11) NOT NULL,
+  `discount` int(11),
   `genre_id` int(11) NOT NULL,
   `imgref_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
