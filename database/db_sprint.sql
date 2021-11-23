@@ -4,7 +4,7 @@ USE `db_sprint`;
 --
 -- Host: localhost    Database: db_sprint
 -- ------------------------------------------------------
--- Server version	5.5.5-10.4.20-MariaDB
+-- Server version	5.5.5-10.4.21-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -37,8 +37,7 @@ CREATE TABLE `genres` (
 
 LOCK TABLES `genres` WRITE;
 /*!40000 ALTER TABLE `genres` DISABLE KEYS */;
-INSERT INTO `genres` VALUES (1,'Acción');
-
+INSERT INTO `genres` VALUES (1,'Accion');
 /*!40000 ALTER TABLE `genres` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -65,6 +64,7 @@ CREATE TABLE `imgrefs` (
 
 LOCK TABLES `imgrefs` WRITE;
 /*!40000 ALTER TABLE `imgrefs` DISABLE KEYS */;
+INSERT INTO `imgrefs` VALUES (1,'tribes1.jpg','tribes2.jpg','tribes3.jpg','tribes4.jpg');
 /*!40000 ALTER TABLE `imgrefs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,7 +88,7 @@ CREATE TABLE `productos` (
   KEY `productos_FK_1` (`imgref_id`),
   CONSTRAINT `productos_FK` FOREIGN KEY (`genre_id`) REFERENCES `genres` (`id`),
   CONSTRAINT `productos_FK_1` FOREIGN KEY (`imgref_id`) REFERENCES `imgrefs` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,6 +97,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` VALUES (1,'Tribes of Midgard',333,'Un juego increible para jugar',30,1,1);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -140,4 +141,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-18 20:36:51
+-- Dump completed on 2021-11-23 10:58:30
