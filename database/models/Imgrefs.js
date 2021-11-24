@@ -33,8 +33,8 @@ module.exports = (sequelize, DataTypes) => {
 const Imgref = sequelize.define(alias, cols, config)
 
 Imgref.associate = function(models){
-    Imgref.hasMany(models.Producto, {
-        as: "Productos",
+    Imgref.hasOne(models.Productos, {
+        as: "productos",
         foreignKey: "imgref_id"
     })
 }

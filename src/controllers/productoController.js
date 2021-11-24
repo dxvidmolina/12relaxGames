@@ -3,6 +3,7 @@ const path = require('path');
 const Products = require('../models/product')
 let db= require("../../database/models");
 const e = require('express');
+const { Association } = require('sequelize/types');
 const sequelize = db.sequelize;
 
 function findAll(){
@@ -83,7 +84,9 @@ const productoController=
     
         },
         'list': (req, res) => {
-            db.Producto.findAll()
+            db.Producto.findAll(/*{
+                include:[{association:"images"}]
+            }*/)
                 .then(producto => {
                     res.render('lista', {producto : producto})
                 })
