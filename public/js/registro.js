@@ -1,59 +1,74 @@
+let inputEdad= document.querySelector('#edad')
+inputEdad.addEventListener('keypress',(e)=>{
+    if(!(e.keyCode >= 48 && e.keyCode <= 57)){
+        e.preventDefault()
+    }
+})
+
+
+
+
+
 
  window.addEventListener("load",function(){
  window.addEventListener("submit",function(e){
-    let errores = []
+     e.preventDefault()
     let form = document.querySelector("form");
     let nombre = document.querySelector("#nombre");
+    let nombreValidacion = document.querySelector('.nombreValidacion')
     if(nombre.value.length < 2){
-        errores.push("El campo necesita al menos tres caracteres")
+        (nombreValidacion.innerHTML='Este campo debe tener al menos dos caracteres') && (e.preventDefault())
         
     }else if (nombre.value == ""){
-        errores.push("El campo está vacio")
+        (nombreValidacion.innerHTML='Este campo no puede estar vacío') && (e.preventDefault())
         
+    }else{
+        nombreValidacion.innerHTML=''
     }
     let email = document.querySelector("#email");
-    if(email.value== "" || email.value == null){
-        errores.push("El campo necesita al menos siete caracteres")
-        
-    }else if (email.value.length <2){
-        errores.push("El campo está vacio")
-        
+    let emailCorrecto = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$/
+    let emailValidacion = document.querySelector('.emailValidacion')
+    if((emailCorrecto.test(email.value))===false){
+        (emailValidacion.innerHTML= 'Este campo debe tener mail') && (e.preventDefault())
+    }else{
+        emailValidacion.innerHTML= ''
+    }
+    let email1 = document.querySelector("#email1")
+    let emailValidacion1= document.querySelector('.emailValidacion1')
+    if(email1.value!=email.value){
+        (emailValidacion1.innerHTML='Los emails no coinciden') && (e.preventDefault())
+    }else{
+        emailValidacion1.innerHTML=''
     }
     let password = document.querySelector("#password");
-    if(password.value.length < 7){
-        errores.push("El campo necesita al menos ocho caracteres")
+    let passwordValidation= document.querySelector('.passwordValidacion')
+
+    if (password.value === ""){
+        (passwordValidation.innerHTML = 'Campo obligatorio') && (e.preventDefault())
         
-    }else if (password.value == "" || password.value == null){
-        errores.push("El campo está vacio")
+    }else if(password.value.length < 7){
+        (passwordValidation.innerHTML = 'La contraseña debe tener al menos 8 letras') && (e.preventDefault())
         
+    }else{
+        passwordValidation.innerHTML = ''
     }
-    let lastName = document.querySelector("#nickname");
+    let lastName = document.querySelector("#apellido");
+    let apellidoValidacion = document.querySelector('.apellidoValidacion')
     if(lastName.value.length < 5){
-        errores.push("El campo necesita al menos seis caracteres")
+        (apellidoValidacion.innerHTML= 'Este campo debe tener al menos 5 letras') && (e.preventDefault())
         
     }else if (lastName.value == "" || lastName.value == null){
-        errores.push("El campo está vacio")
+        (apellidoValidacion.innerHTML= 'Este campo no puede estar vacio') && (e.preventDefault())
         
+    }else{
+        apellidoValidacion.innerHTML= ''
     }
-    let pais = document.querySelector("#pais");
-    if(pais.value == "" || pais.value == null){
-        errores.push("Debe seleccionar una opción")
-    }
-
-    let edad = document.querySelector("#edad");
-    if(edad.value == "" || edad.value == null){
-        errores.push("Este campo está vacio")
+    let password1= document.querySelector('#password1')
+    let passwordValidation1= document.querySelector('.passwordValidacion1')
+    if(password1.value!==password.value){
+        (passwordValidation1.innerHTML='Constraseñas no coinciden') && (e.preventDefault())
     }
 
-    
-    if (errores.length > 0){
-        console.log(errores)
-        e.preventDefault();
-        let ulError = document.querySelector(".errores ul")
-        errores.forEach(error => {
-            ulError.innerHTML += '<li>' + error +  '</li>'
-        })
-    }
 })
 
 

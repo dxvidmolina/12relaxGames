@@ -8,14 +8,25 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             allowNull: false 
         },
-        imgref:{
+        imgref1:{
+            type: DataTypes.STRING(100),
+            allowNull: false
+        },
+        imgref2:{
+            type: DataTypes.STRING(100),
+            allowNull: false
+        },imgref3:{
+            type: DataTypes.STRING(100),
+            allowNull: false
+        },
+        imgref4:{
             type: DataTypes.STRING(100),
             allowNull: false
         }
 
 }
     let config = {
-        tableName: 'imgref',
+        tableName: 'imgrefs',
         timestamps: false
     }
 
