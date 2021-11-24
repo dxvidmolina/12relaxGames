@@ -45,9 +45,9 @@ Producto.associate = function(models){
         as: "generos",
         foreignKey: "genre_id"
     },
-    Producto.belongsTo(models.Imgref, {
+    Producto.hasMany(models.Imgref, {
         as: "img",
-        foreignKey: "imgref_id",
+        foreignKey: "imgrefs_id",
     }))
 
 }

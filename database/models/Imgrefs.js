@@ -12,17 +12,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(100),
             allowNull: false
         },
-        imgref2:{
-            type: DataTypes.STRING(100),
-            allowNull: false
-        },imgref3:{
-            type: DataTypes.STRING(100),
-            allowNull: false
-        },
-        imgref4:{
-            type: DataTypes.STRING(100),
-            allowNull: false
-        }
 
 }
     let config = {
@@ -33,9 +22,9 @@ module.exports = (sequelize, DataTypes) => {
 const Imgref = sequelize.define(alias, cols, config)
 
 Imgref.associate = function(models){
-    Imgref.hasMany(models.Producto, {
+    Imgref.belongsTo(models.Producto, {
         as: "Productos",
-        foreignKey: "imgref_id"
+        foreignKey: "productos_id"
     })
 }
     return Imgref;
