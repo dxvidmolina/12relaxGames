@@ -4,7 +4,7 @@ const Products = require('../models/product')
 let db= require("../../database/models");
 const e = require('express');
 //const { Association } = require('sequelize/types');
-//const sequelize = db.sequelize;
+const sequelize = db.sequelize;
 
 function findAll(){
     let todosProductos = fs.readFileSync(path.join(__dirname, "../data/arrayProductos.json"))
@@ -14,12 +14,15 @@ function findAll(){
 const productoController=
         {
             detail: (req, res) => {
-                db.Producto.findbyPk(req.params.id,
+                db.Producto.findByPk(req.params.id,
                     {
                         include : [{association:'images'}]
                     })
                     .then(producto => {
                         res.render('detail', {producto : producto})
+                    })
+                    .catch(function(){
+                        console.log('error')
                     })
             
             /*let errores = validationResult(req);
@@ -45,7 +48,7 @@ const productoController=
                 Producto.findBypk(req.params.id)
                 .then(function(resultados){
                     res.render('productoform',{
-                        product
+                        product : product
                     })
                 })
             /* let product = Products.findById(req.params.id)
@@ -98,9 +101,9 @@ const productoController=
     
         },
         'list': (req, res) => {
-            db.Producto.findAll(/*{
+            db.Producto.findAll({
                 include:[{association:"images"}]
-            }*/)
+            })
                 .then(producto => {
                     res.render('lista', {producto : producto})
                 })
