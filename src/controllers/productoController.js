@@ -3,8 +3,8 @@ const path = require('path');
 const Products = require('../models/product')
 let db= require("../../database/models");
 const e = require('express');
-const { Association } = require('sequelize/types');
-const sequelize = db.sequelize;
+//const { Association } = require('sequelize/types');
+//const sequelize = db.sequelize;
 
 function findAll(){
     let todosProductos = fs.readFileSync(path.join(__dirname, "../data/arrayProductos.json"))
@@ -14,13 +14,21 @@ function findAll(){
 const productoController=
         {
             detail: (req, res) => {
+                db.Producto.findbyPk(req.params.id,
+                    {
+                        include : [{association:'images'}]
+                    })
+                    .then(producto => {
+                        res.render('detail', {producto : producto})
+                    })
+            
             /*let errores = validationResult(req);
             if (!errores.isEmpty()){
                     console.log(errores)
                 return res.render ('registro', {errores: errores.array()})
                 res.redirect("crearProducto");
                 }*/
-            let product = Products.findById(req.params.id)
+            /*let product = Products.findById(req.params.id)
             if(product){
                 res.render('detail',{
                     product: product,
@@ -28,17 +36,23 @@ const productoController=
             }
             else{
                 res.redirect('/')
-            }
+            }*/
         },
             producto1:(req,res)=>{
             res.render('home')
         },
             edit: (req, res) => {
-            let product = Products.findById(req.params.id)
+                Producto.findBypk(req.params.id)
+                .then(function(resultados){
+                    res.render('productoform',{
+                        product
+                    })
+                })
+            /* let product = Products.findById(req.params.id)
             res.render('productoform',{
                 productToEdit: product
             });
-        },
+        */},
             upload: (req, res) => {
             let products_copy = Products.getAll().map(product => {
                     if (product.id == req.params.id) {

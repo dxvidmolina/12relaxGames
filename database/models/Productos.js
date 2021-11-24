@@ -32,15 +32,12 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        imgref_id:{
-            type: DataTypes.INTEGER,
-            allowNull: false
-        }
+        
 
     }
     let config = {
         tableName: 'productos',
-        timestamps: false
+        timestamps : false
     }
 const Producto = sequelize.define(alias, cols, config)
 
@@ -49,7 +46,7 @@ Producto.associate = function(models){
         as: "generos",
         foreignKey: "genre_id"
     },
-    Producto.belongsTo(models.Imgrefs, {
+    Producto.hasMany(models.Imgref, {
         as: "images",
         foreignKey: "imgref_id",
     }))
