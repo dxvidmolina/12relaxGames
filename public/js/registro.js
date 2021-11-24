@@ -12,7 +12,6 @@ inputEdad.addEventListener('keypress',(e)=>{
 
  window.addEventListener("load",function(){
  window.addEventListener("submit",function(e){
-     e.preventDefault()
     let form = document.querySelector("form");
     let nombre = document.querySelector("#nombre");
     let nombreValidacion = document.querySelector('.nombreValidacion')

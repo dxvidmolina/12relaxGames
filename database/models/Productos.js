@@ -16,6 +16,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false
         },
+        creation_date:{
+            type: DataTypes.DATE,
+            allowNull: false
+        },
         description:{
             type: DataTypes.STRING,
             allowNull: false
@@ -45,9 +49,9 @@ Producto.associate = function(models){
         as: "generos",
         foreignKey: "genre_id"
     },
-    Producto.hasMany(models.Imgref, {
-        as: "img",
-        foreignKey: "imgrefs_id",
+    Producto.belongsTo(models.Imgrefs, {
+        as: "images",
+        foreignKey: "imgref_id",
     }))
 
 }
