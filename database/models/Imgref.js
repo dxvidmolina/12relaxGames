@@ -21,5 +21,11 @@ module.exports = (sequelize, DataTypes) => {
 
 const Imgref = sequelize.define(alias, cols, config)
 
+Imgref.associate = function(models){
+    Imgref.hasMany(models.Producto, {
+        as: "Productos",
+        foreignKey: "imgref_id"
+    })
+}
     return Imgref;
 }

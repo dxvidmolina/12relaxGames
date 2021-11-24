@@ -13,12 +13,7 @@ function findAll(){
 const productoController=
         {
             detail: (req, res) => {
-            let errores = validationResult(req);
-            if (!errores.isEmpty()){
-                    console.log(errores)
-                return res.render ('registro', {errores: errores.array()})
-                res.redirect("crearProducto");
-                }
+            
             let product = Products.findById(req.params.id)
             if(product){
                 res.render('detail',{
@@ -64,12 +59,20 @@ const productoController=
             res.render("crearProducto")
         },
              storage: function(req, res){
-                let arrayProductos = {
-                name: req.body.name,
-                price: req.body.price,
-                genre: req.body.genre,
-                desc: req.body.price,
-                img: req.body.img
+
+                let errores = validationResult(req);
+                if (!errores.isEmpty()){
+                    console.log(errores)
+                return res.render ('registro', {errores: errores.array()})
+                }else {
+                    let arrayProductos = {
+                    name: req.body.name,
+                    price: req.body.price,
+                    genre: req.body.genre,
+                    desc: req.body.price,
+                    img: req.body.img
+                }
+                
         }
         res.redirect("crearProducto");
     
