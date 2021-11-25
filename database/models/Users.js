@@ -11,6 +11,14 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(20),
             allowNull: false
         },
+        apellido:{
+            type: DataTypes.STRING(20),
+            allowNull: false
+        },
+        email:{
+            type: DataTypes.STRING(20),
+            allowNull: false
+        },
         password:{
             type: DataTypes.STRING,
             allowNull: false
@@ -27,15 +35,12 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER(2),
             allowNull: false
         },
-        img:{
-            type: DataTypes.STRING(100),
-            allowNull: false
-        }
 
     }
     let config = {
-        tableName: 'users',
-        timestamps: false
+        tablename:'users',
+        timestamps: false,
+
     }
 
 const User = sequelize.define(alias, cols, config)

@@ -66,6 +66,8 @@ inputEdad.addEventListener('keypress',(e)=>{
     let passwordValidation1= document.querySelector('.passwordValidacion1')
     if(password1.value!==password.value){
         (passwordValidation1.innerHTML='Constraseñas no coinciden') && (e.preventDefault())
+    }else{
+        passwordValidation1.innerHTML=''
     }
 
 })

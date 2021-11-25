@@ -16,10 +16,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        creation_date:{
-            type: DataTypes.DATE,
-            allowNull: false
-        },
         description:{
             type: DataTypes.STRING,
             allowNull: false
@@ -32,12 +28,16 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false
         },
+        imgref:{
+            type: DataTypes.STRING,
+            allowNull: false
+        }
         
 
     }
     let config = {
         tableName: 'productos',
-        timestamps : false
+        timestamps:false
     }
 const Producto = sequelize.define(alias, cols, config)
 
@@ -45,11 +45,8 @@ Producto.associate = function(models){
     Producto.belongsTo(models.Genres, {
         as: "generos",
         foreignKey: "genre_id"
-    },
-    Producto.hasMany(models.Imgref, {
-        as: "images",
-        foreignKey: "imgref_id",
-    }))
+    }
+    )
 
 }
 

@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require('bcryptjs');
 const { validationResult } = require("express-validator")
+let db= require("../../database/models");
+
 //Funciones
 
 //Reescribir Json
@@ -32,7 +34,19 @@ const registerController={
     //Guardar usuario, con validaciones previas y sin sobreescribir
 
     guardarUsuario: (req, res) => {
-        let errores = validationResult(req);
+       db.User.create({
+            name: req.body.nombre,
+            apellido: req.body.apellido,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            nickname: req.body.nickname,
+            pais: req.body.pais,
+            edad: req.body.edad,
+        }).then(function(){
+             console.log(req.body.nombre) 
+         })
+        /*let errores = validationResult{
+            validationResult(req);
         if (!errores.isEmpty()){
             console.log(errores)
             return res.render ('registro', {errores: errores.array()})
@@ -69,7 +83,7 @@ const registerController={
             })}
         
 
-    }
+        */}
 }
         
 

@@ -12,6 +12,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(100),
             allowNull: false
         },
+        producto_id:{
+            type: DataTypes.INTEGER
+        }
 
 }
     let config = {
@@ -21,11 +24,6 @@ module.exports = (sequelize, DataTypes) => {
 
 const Imgref = sequelize.define(alias, cols, config)
 
-Imgref.associate = function(models){
-    Imgref.belongsTo(models.Producto, {
-        as: "Productos",
-        foreignKey: "productos_id"
-    })
-}
+
     return Imgref;
 }

@@ -13,17 +13,18 @@ function findAll(){
 }
 const productoController=
         {
-            detail: (req, res) => {
-                db.Producto.findByPk(req.params.id,
-                    {
-                        include : [{association:'images'}]
-                    })
+            'detail': (req, res) => {
+                db.Producto.findByPk(req.params.id)
                     .then(producto => {
                         res.render('detail', {producto : producto})
                     })
                     .catch(function(){
                         console.log('error')
-                    })
+                    })/*).then(function(producto){
+                        res.render('detail',{producto:producto})
+                    }).catch(error => {
+                        res.send(error)
+                    })*/
             
             /*let errores = validationResult(req);
             if (!errores.isEmpty()){
@@ -102,13 +103,13 @@ const productoController=
         },
         'list': (req, res) => {
             db.Producto.findAll({
-                include:[{association:"images"}]
+                include:[{association:"generos"}]
             })
                 .then(producto => {
                     res.render('lista', {producto : producto})
                 })
                 .catch(error => {
-                    console.log("error")
+                    console.log(error)
                 })
         }
 }

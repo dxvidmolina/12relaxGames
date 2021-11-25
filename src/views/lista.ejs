@@ -16,11 +16,13 @@
         <% producto.forEach(function(producto){ %>
             <article>
                 <div class="imagen">
-                    <img src="/productos/Producto_img/<%=producto.img%>" alt="">
+                    <img src="/images/<%=producto.imgref%>" alt="">
                 </div>
                <div class="parametrosFlex">
                 <div class="parametros">
                     <ul>
+                        
+                        <li>Nombre: <%= producto.generos.name %>  </li>
                         <li>Nombre: <%= producto.name %>  </li>
                         <li>Descuento: <%=producto.discount  %>  </li>
                         <li>Precio: $ <%=producto.price %>  </li>
