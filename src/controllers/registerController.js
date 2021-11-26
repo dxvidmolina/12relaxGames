@@ -43,7 +43,7 @@ const registerController={
             pais: req.body.pais,
             edad: req.body.edad,
         }).then(function(){
-             console.log(req.body.nombre) 
+             res.redirect("/login")
          })
         /*let errores = validationResult{
             validationResult(req);

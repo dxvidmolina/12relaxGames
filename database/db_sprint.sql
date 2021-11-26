@@ -251,7 +251,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','apellidoadmin','admin@gmail.com','admin123','admin','Argentina',12);
+INSERT INTO `users` VALUES (1,'admin','apellidoadmin', '2020-12-16 12:00:00','admin@gmail.com','admin123','admin','Argentina',12);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
