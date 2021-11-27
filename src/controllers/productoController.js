@@ -82,7 +82,25 @@ const productoController=
         },  create: (req,res)=>{
             res.render("crearProducto")
         },
-             storage: function(req, res){
+             'storage': function(req, res){
+                 db.Producto.create({
+                     name: req.body.name,
+                     price: req.body.price,
+                     description: req.body.desc,
+                     discount: req.body.descuento,
+                     creation_date : '2020-12-16 12:00:00',
+                     genre_id: req.body.generos,
+                     imgref: req.body.img
+
+                 })
+                 .then(function(){
+                     res.redirect('/')
+                 }).catch(function(error){
+                     console.log(error)
+                 })
+                },
+
+                 /*
 
                 let errores = validationResult(req);
                 if (!errores.isEmpty()){
@@ -100,7 +118,7 @@ const productoController=
         }
         res.redirect("crearProducto");
     
-        },
+    */ 
         'list': (req, res) => {
             db.Producto.findAll({
                 include:[{association:"generos"}]
