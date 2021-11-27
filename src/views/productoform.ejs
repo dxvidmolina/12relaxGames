@@ -21,35 +21,49 @@
       <% }) %>
       <% } %> 
   </div>
-    <h1>Editar Juego:"<%= productToEdit.nombreJuego %> "</h1>
+    <h1>Editar Juego:"<%= productToEdit.name %> "</h1>
 
     <main >
       <div class="div-form">
 
-      <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST">
+      <form action= "/products/edit/<%= productToEdit.id %>" method="POST">
   
           <div class="form-edit">
             <label for="nombreJuego">Nombre Juego:</label>
-            <input type="text"  value="<%= productToEdit.nombreJuego %>" name="nombreJuego" id="nombreJuego">
+            <input type="text"  value="<%= productToEdit.name %>" name="nombreJuego" id="nombreJuego">
             <div class='input' id='danger'></div>
           </div>
           
           <div class="form-edit" >
             <label for="precio">Precio:</label>
-            <input type="text" value="<%= productToEdit.precio %>" name="precio"  id="precio">
+            <input type="text" value="<%= productToEdit.price %>" name="precio"  id="precio">
           </div>
   
           <div class="form-edit">
             <label for="detalleJuego">Detalle Producto:</label>
-            <input type="text" value="<%= productToEdit.detalleJuego %>" name="detalleJuego" id="detalleJuego">
+            <input type="text" value="<%= productToEdit.description %>" name="detalleJuego" id="detalleJuego">
             <div class='description' id='danger'></div>
           </div>
 
           <div class="form-edit">
             <label for="descuento">Descuento:</label>
-            <input type="text" value="<%= productToEdit.descuento %>" name="descuento" id="descuento">
+            <input type="text" value="<%= productToEdit.discount %>" name="descuento" id="descuento">
           </div>
 
+          <select name="generos" id="generos">
+            <option value="1">Accion</option>
+            <option value="2">Disparos</option>
+            <option value="3">Estrategia</option>
+            <option value="4">SimulaciÃ³n</option>
+            <option value="5">Deporte</option>
+            <option value="6">Carreras</option>
+            <option value="7">Aventura</option>
+            <option value="8">Rol</option>
+            <option value="9">Otro</option>
+          </select>
+
+          
+        
           <div class="form-edit">
             <button type="submit">
               Editar

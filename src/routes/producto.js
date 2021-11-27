@@ -8,21 +8,19 @@ const { check } = require("express-validator");
 const validateCreate =[
     check("name")
         .notEmpty().withMessage("Ingresar un nombre").bail()
-        .isLength({min: 5}).withMessage("Ingresar un nombre valido"),
+        .isLength({min: 5}).withMessage("Ingresar al menos 5 caracteres"),
     check("desc")
-        .notEmpty().bail()
-        .isLength({min: 20}).withMessage("Ingresar una descripcion de al menos 20 caracteres"),
+        .isLength({min: 20}).withMessage("Ingresar una descripción de al menos 20 caracteres"),
 ];
 
 
-router.get("/lista",productoController.list)
+router.get("/lista",productoController.list);
 router.get("/producto",productoController.entrarproducto);
 router.get("/create", productoController.create);
 router.post("/create", validateCreate, productoController.storage);
-router.get('/:id/', productoController.detail);
-router.get('/',productoController.producto1)
-router.get('/:id/edit/', productoController.edit);
-router.put('/:id/',productoController.upload);
-router.delete('/:id/delete/', productoController.destroy)
+router.get('/:id', productoController.detail);
+router.get('/edit/:id', productoController.edit);
+router.post('/edit/:id',productoController.upload);
+router.delete('/:id/delete', productoController.destroy)
 
 module.exports = router;

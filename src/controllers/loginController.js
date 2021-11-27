@@ -1,11 +1,11 @@
 const User = require("../models/users.js")
 const bcryptjs = require("bcryptjs")
 const { validationResult } = require("express-validator")
-const loginController={
-    entrarLogin:(req,res)=>{
+const loginController=
+    {entrarLogin:(req,res)=>{
         res.render("login")
-        
     },
+
     processLogin: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty){
