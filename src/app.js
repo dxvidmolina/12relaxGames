@@ -1,8 +1,6 @@
 const express= require('express');
 const app = express();
 const path = require('path');
-const publicPath = path.resolve(__dirname, "./public");
-const multer= require('multer');
 const methodOverride = require('method-override');
 const session = require('express-session')
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
@@ -49,6 +47,9 @@ app.get('/buendia', function(req,res){
 app.use('/login', usersRouter);
 app.use('/products', productRouter)
 app.use('/registro', registerRouter)
+app.post('/busqueda',(req,res)=>{
+  res.render('busqueda')
+})
 
 app.use(function(req, res, next) {
   next(createError(404));
