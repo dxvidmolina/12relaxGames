@@ -21,6 +21,6 @@ router.post("/create", validateCreate, productoController.storage);
 router.get('/:id', productoController.detail);
 router.get('/edit/:id', productoController.edit);
 router.post('/edit/:id',productoController.upload);
-router.delete('/:id/delete', productoController.destroy)
+router.delete('/edit/:id', productoController.destroy)
 
 module.exports = router;
