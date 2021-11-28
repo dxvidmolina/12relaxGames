@@ -19,7 +19,8 @@ const usersRouter = require('./routes/users');
 const productRouter = require('./routes/producto');
 const registerRouter = require('./routes/register');
 const { use } = require('./routes/register');
-
+const apiProducto = require('./routes/apis/producto');
+//const apiUsuarios = require('./routes/apis/usuarios');
 /*const adminAddRouter = require('');
 const adminRouter = require('');
 */
@@ -47,10 +48,8 @@ app.get('/buendia', function(req,res){
 app.use('/login', usersRouter);
 app.use('/products', productRouter)
 app.use('/registro', registerRouter)
-app.post('/busqueda',(req,res)=>{
-  res.render('busqueda')
-})
-
+app.use('/api', apiProducto)
+//app.use("/api", apiUsuarios)
 app.use(function(req, res, next) {
   next(createError(404));
 });
