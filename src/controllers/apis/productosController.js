@@ -1,9 +1,7 @@
 const e = require('express');
-const sequelize = db.sequelize;
 const fs = require('fs');
 const path = require('path');
-const Producto = require('../../models/productos')
-let db= require("../../../database/models");
+const db = require("../../../database/models");
 
 const productoController =
             {detail: (req, res) => {
@@ -19,8 +17,7 @@ const productoController =
                     db.Producto.findAll({
                         include:[{association:"generos"}]})
                         .then(producto => {
-                        return res
-                        .json()
+                         res.json()
                         })
                         .catch(error => 
                         {console.log(error)})
