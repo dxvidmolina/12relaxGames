@@ -6,7 +6,7 @@ const db= require("../../../database/models");
 
 const usuariosController =
             {detail: (req, res) => {
-                    db.Usuario.findByPk(req.params.id)
+                    db.User.findByPk(req.params.id)
                     .then(usuario => {
                         res
                         .status(status)
@@ -15,10 +15,9 @@ const usuariosController =
                         .catch(error => 
                         {console.log(error)})     
             },list:(req, res) => {
-                    db.Usuario.findAll()
+                    db.User.findAll()
                         .then(usuario => {
-                        res
-                        .json(usuario)
+                        res.json(usuario)
                         })
                         .catch(error => 
                         {console.log(error)})

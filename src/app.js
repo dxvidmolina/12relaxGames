@@ -20,6 +20,7 @@ const productRouter = require('./routes/producto');
 const registerRouter = require('./routes/register');
 const { use } = require('./routes/register');
 const apiProducto = require('./routes/apis/producto');
+const apiUsers = require('./routes/apis/usuarios');
 //const apiUsuarios = require('./routes/apis/usuarios');
 /*const adminAddRouter = require('');
 const adminRouter = require('');
@@ -49,6 +50,7 @@ app.use('/login', usersRouter);
 app.use('/products', productRouter)
 app.use('/registro', registerRouter)
 app.use('/api', apiProducto)
+app.use('/api', apiUsers)
 //app.use("/api", apiUsuarios)
 app.use(function(req, res, next) {
   next(createError(404));

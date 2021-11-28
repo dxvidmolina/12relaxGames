@@ -4,7 +4,8 @@ const path = require('path');
 const db = require("../../../database/models");
 
 const productoController =
-            {detail: (req, res) => {
+            {
+                detail: (req, res) => {
                     db.Producto.findByPk(req.params.id)
                     .then(producto => {
                         res
@@ -17,7 +18,7 @@ const productoController =
                     db.Producto.findAll({
                         include:[{association:"generos"}]})
                         .then(producto => {
-                         res.json()
+                         res.json({data:producto, total: producto.length})
                         })
                         .catch(error => 
                         {console.log(error)})
