@@ -4,6 +4,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session')
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
+const db = require("../database/models");
 app.use(session({
 	secret: "Shhh, It's a secret",
 	resave: false,
@@ -41,6 +42,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static("public"));
 
+
 app.use('/', homeRouter);
 
 app.get('/buendia', function(req,res){
@@ -51,6 +53,13 @@ app.use('/products', productRouter)
 app.use('/registro', registerRouter)
 app.use('/api', apiProducto)
 app.use('/api', apiUsers)
+app.post('/busqueda',(req,res)=>{
+  db.Producto.findOne({
+    where: {name: req.body.paraBuscar}
+  }).then(function(busqueda){
+    res.render('busqueda', {busqueda:busqueda})
+  })
+})
 //app.use("/api", apiUsuarios)
 app.use(function(req, res, next) {
   next(createError(404));
