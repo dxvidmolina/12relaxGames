@@ -37,10 +37,11 @@ CREATE TABLE `genres` (
 
 LOCK TABLES `genres` WRITE;
 /*!40000 ALTER TABLE `genres` DISABLE KEYS */;
-INSERT INTO `genres` VALUES (1,'Accion'),
+INSERT INTO `genres` VALUES 
+(1,'Accion'),
 (2,'Disparos'),
 (3,'Estrategia'),
-(4,'SimulaciÃ³n'),
+(4,'Simulación'),
 (5,'Deporte'),
 (6,'Carreras'),
 (7,'Aventura'),
@@ -205,22 +206,22 @@ CREATE TABLE `productos` (
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
 INSERT INTO `productos` VALUES (1,'Tribes of Midgard',333,'Un juego increible para jugar',30,'2020-12-16 12:00:00',1,'tribesproducto.jpg'),
-(2,'Battlefield',900,'BattlefieldÃ¢â€žÂ¢ 2042 es un juego de disparos en primera persona que marca el regreso de la icÃƒÂ³nica guerra total de la franquicia. AdÃƒÂ¡ptate en un mundo del futuro cercano transformado por el desorden y vence en campos de batalla cambiantes con la ayuda de tu escuadrÃƒÂ³n y un arsenal innovado',70,'2020-12-20 12:40:12',1,'Captura2.PNG'),
-(3,'Grand Theft Auto V',700,'Ã‚Â¡Grand Theft Auto V para PC ofrece a los jugadores la opciÃƒÂ³n de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resoluciÃƒÂ³n de 4K y disfrutar del juego a 60 fotogramas por segundo.',15,'2020-12-16 16:55:16',1,'Captura3.PNG'),
-(4,'New World',999,'Explora un electrizante videojuego MMO de mundo abierto. Forja tu destino en Aeternum, una isla sobrenatural donde hallarÃƒÂ¡s toda clase de peligros y oportunidades.',10,'2021-01-25 06:15:50',1,'foto1carrito.jpg'),
-(5,'The Ascent',900,'The Ascent es un shooter RPG de acciÃƒÂ³n individual y cooperativo ambientado en un mundo ciberpunk. El Grupo AscensiÃƒÂ³n, la megacorporaciÃƒÂ³n a la que todos pertenecen, ha quebrado. Ã‚Â¿SobrevivirÃƒÂ¡s sin ÃƒÂ©l?',10,'2020-08-12 15:20:41',1,'foto2carrito.jpg'),
+(2,'Battlefield',900,'Battlefieldâ„¢ 2042 es un juego de disparos en primera persona que marca el regreso de la icÃ³nica guerra total de la franquicia. AdÃ¡ptate en un mundo del futuro cercano transformado por el desorden y vence en campos de batalla cambiantes con la ayuda de tu escuadrÃ³n y un arsenal innovado',70,'2020-12-20 12:40:12',1,'Captura2.PNG'),
+(3,'Grand Theft Auto V',700,'Â¡Grand Theft Auto V para PC ofrece a los jugadores la opciÃ³n de explorar el galardonado mundo de Los Santos y el condado de Blaine con una resoluciÃ³n de 4K y disfrutar del juego a 60 fotogramas por segundo.',15,'2020-12-16 16:55:16',1,'Captura3.PNG'),
+(4,'New World',999,'Explora un electrizante videojuego MMO de mundo abierto. Forja tu destino en Aeternum, una isla sobrenatural donde hallarÃ¡s toda clase de peligros y oportunidades.',10,'2021-01-25 06:15:50',1,'foto1carrito.jpg'),
+(5,'The Ascent',900,'The Ascent es un shooter RPG de acciÃ³n individual y cooperativo ambientado en un mundo ciberpunk. El Grupo AscensiÃ³n, la megacorporaciÃ³n a la que todos pertenecen, ha quebrado. Â¿SobrevivirÃ¡s sin Ã©l?',10,'2020-08-12 15:20:41',1,'foto2carrito.jpg'),
 (6,'Chivalry: MW',2000,'Asedia castillos y asalta pueblos en Chivalry: Medieval Warfare, un trepidante slasher medieval en primera persona que se centra en las batallas multijugador.',30,'2020-12-16 10:05:12',1,'foto4carrito.jpg'),
-(7,'Mass Effect',3000,'Mass EffectÃ¢â€žÂ¢ Legendary Edition incluye el contenido bÃƒÂ¡sico para un jugador y mÃƒÂ¡s de cuarenta artÃƒÂ­culos descargables de Mass Effect, Mass Effect 2 y Mass Effect 3, ademÃƒÂ¡s de armas, armaduras y paquetes promocionales remasterizados y optimizados en 4K Ultra HD.',30,'2021-02-12 12:01:00',1,'foto5carrito.jpg'),
-(8,'Days Gone',1500,'Conduce y lucha en Estados Unidos, un lugar letal tras una pandemia.Como Deacon St. John, un motociclista errante y cazarrecompensas que viaja por el camino averiado y lucha por sobrevivir a la vez que busca una razÃƒÂ³n para vivir en este juego de acciÃƒÂ³n y aventura en un mundo abierto',15,'2021-01-20 14:00:16',1,'foto6carrito.jpg'),
-(9,'Predator: Hunting Grounds',500,'Ã‚Â¡Disfruta de este juego de disparos multijugador asimÃƒÂ©trico* donde se enfrentan humanos y depredador. Solo recuerda: Ã‚Â¡o cazas o te cazan! Forma parte de un grupo comando y completa las misiones antes de que el depredador te encuentre. O juega como el depredador y caza a tus presas',30,'2021-03-21 14:20:02',1,'predatoricon.jpg'),
-(10,'Apex Legends Founders edition',1500,'Apex Legends es el galardonado juego de disparos de hÃƒÂ©roes gratuito de Respawn Entertainment. Controla un elenco en aumento de personajes con habilidades poderosas y disfruta del juego estratÃƒÂ©gico por escuadrones y de la dinÃƒÂ¡mica de juego innovadora del nuevo Battle Royale.',10,'2020-12-25 14:20:07',1,'fortressicon.jpg'),
-(11,'Team Fortress 2',1500,'Las distintas clases proporcionan una amplia gama de habilidades tÃƒÂ¡cticas y personalidades. Constantemente actualizado con nuevos modos de juego, mapas, equipo y, lo mÃƒÂ¡s importante, Ã‚Â¡sombreros!',5,'2021-07-20 12:06:10',1,'rogueicon.jpg'),
-(12,'Rogue Company',2000,'Ã‚Â¡ÃƒÅ¡nete a mÃƒÂ¡s de 20 millones de jugadores en Rogue Company, el mejor juego de disparos tÃƒÂ¡ctico en tercera persona! ConviÃƒÂ©rtete en un mercenario y usa poderosas armas, artefactos de alta tecnologÃƒÂ­a y habilidades decisivas. Acepta la misiÃƒÂ³n y disfruta de modos de juego 4v4 y 6v6',25,'2021-05-06 16:06:01',1,'dotaicon.jpg'),
-(13,'Dota 2',750,'Cada dÃƒÂ­a, millones de jugadores de todo el mundo entran en batalla como uno de los mÃƒÂ¡s de cien hÃƒÂ©roes de Dota. Y no importa si es su dÃƒÂ©cima o su milÃƒÂ©sima hora de juego: siempre hay algo nuevo que descubrir.',22,'2021-08-22 12:40:50',1,'dotaicon.jpg'),
-(14,'Horizon Zero Dawn',2000,'Vive la misiÃƒÂ³n legendaria de Aloy para revelar los secretos de una futura Tierra dominada por mÃƒÂ¡quinas. Ã‚Â¡Usa ataques devastadores contra tus presas y explora un majestuoso mundo abierto en este galardonado RPG de acciÃƒÂ³n!',10,'2021-03-26 18:10:50',1,'dotaicon.jpg'),
-(15,'Fallout 4',1500,'Bethesda Game Studios, los galardonados creadores de Fallout 3 y The Elder Scrolls V: Skyrim, te dan la bienvenida al mundo de Fallout 4, su juego mÃƒÂ¡s ambicioso hasta la fecha y la prÃƒÂ³xima generaciÃƒÂ³n de juegos de mundo abierto.',10,'2021-09-29 14:06:17',1,'dotaicon.jpg'),
-(16,'The Elder Scrolls',1700,'ÃƒÅ¡nete a mÃƒÂ¡s de 18 millones de jugadores en este RPG multijugador online y vive una aventura sin lÃƒÂ­mites en el mundo de The Elder Scrolls',5,'2020-11-15 18:06:18',1,'dotaicon.jpg'),
-(17,'The Witcher',1500,'Justo en el momento en el que la guerra se propaga por los Reinos del Norte, aceptas el contrato mÃƒÂ¡s desafiante de tu vida: rastrear a la NiÃƒÂ±a de la profecÃƒÂ­a, un arma viviente que puede alterar el mundo tal y como lo conocemos.',4,'2021-09-12 12:20:59',1,'dotaicon.jpg');
+(7,'Mass Effect',3000,'Mass Effectâ„¢ Legendary Edition incluye el contenido bÃ¡sico para un jugador y mÃ¡s de cuarenta artÃ­culos descargables de Mass Effect, Mass Effect 2 y Mass Effect 3, ademÃ¡s de armas, armaduras y paquetes promocionales remasterizados y optimizados en 4K Ultra HD.',30,'2021-02-12 12:01:00',1,'foto5carrito.jpg'),
+(8,'Days Gone',1500,'Conduce y lucha en Estados Unidos, un lugar letal tras una pandemia.Como Deacon St. John, un motociclista errante y cazarrecompensas que viaja por el camino averiado y lucha por sobrevivir a la vez que busca una razÃ³n para vivir en este juego de acciÃ³n y aventura en un mundo abierto',15,'2021-01-20 14:00:16',1,'foto6carrito.jpg'),
+(9,'Predator: Hunting Grounds',500,'Â¡Disfruta de este juego de disparos multijugador asimÃ©trico* donde se enfrentan humanos y depredador. Solo recuerda: Â¡o cazas o te cazan! Forma parte de un grupo comando y completa las misiones antes de que el depredador te encuentre. O juega como el depredador y caza a tus presas',30,'2021-03-21 14:20:02',1,'predatoricon.jpg'),
+(10,'Apex Legends Founders edition',1500,'Apex Legends es el galardonado juego de disparos de hÃ©roes gratuito de Respawn Entertainment. Controla un elenco en aumento de personajes con habilidades poderosas y disfruta del juego estratÃ©gico por escuadrones y de la dinÃ¡mica de juego innovadora del nuevo Battle Royale.',10,'2020-12-25 14:20:07',1,'fortressicon.jpg'),
+(11,'Team Fortress 2',1500,'Las distintas clases proporcionan una amplia gama de habilidades tÃ¡cticas y personalidades. Constantemente actualizado con nuevos modos de juego, mapas, equipo y, lo mÃ¡s importante, Â¡sombreros!',5,'2021-07-20 12:06:10',1,'rogueicon.jpg'),
+(12,'Rogue Company',2000,'Â¡Ãšnete a mÃ¡s de 20 millones de jugadores en Rogue Company, el mejor juego de disparos tÃ¡ctico en tercera persona! ConviÃ©rtete en un mercenario y usa poderosas armas, artefactos de alta tecnologÃ­a y habilidades decisivas. Acepta la misiÃ³n y disfruta de modos de juego 4v4 y 6v6',25,'2021-05-06 16:06:01',1,'dotaicon.jpg'),
+(13,'Dota 2',750,'Cada dÃ­a, millones de jugadores de todo el mundo entran en batalla como uno de los mÃ¡s de cien hÃ©roes de Dota. Y no importa si es su dÃ©cima o su milÃ©sima hora de juego: siempre hay algo nuevo que descubrir.',22,'2021-08-22 12:40:50',1,'dotaicon.jpg'),
+(14,'Horizon Zero Dawn',2000,'Vive la misiÃ³n legendaria de Aloy para revelar los secretos de una futura Tierra dominada por mÃ¡quinas. Â¡Usa ataques devastadores contra tus presas y explora un majestuoso mundo abierto en este galardonado RPG de acciÃ³n!',10,'2021-03-26 18:10:50',1,'dotaicon.jpg'),
+(15,'Fallout 4',1500,'Bethesda Game Studios, los galardonados creadores de Fallout 3 y The Elder Scrolls V: Skyrim, te dan la bienvenida al mundo de Fallout 4, su juego mÃ¡s ambicioso hasta la fecha y la prÃ³xima generaciÃ³n de juegos de mundo abierto.',10,'2021-09-29 14:06:17',1,'dotaicon.jpg'),
+(16,'The Elder Scrolls',1700,'Ãšnete a mÃ¡s de 18 millones de jugadores en este RPG multijugador online y vive una aventura sin lÃ­mites en el mundo de The Elder Scrolls',5,'2020-11-15 18:06:18',1,'dotaicon.jpg'),
+(17,'The Witcher',1500,'Justo en el momento en el que la guerra se propaga por los Reinos del Norte, aceptas el contrato mÃ¡s desafiante de tu vida: rastrear a la NiÃ±a de la profecÃ­a, un arma viviente que puede alterar el mundo tal y como lo conocemos.',4,'2021-09-12 12:20:59',1,'dotaicon.jpg');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
