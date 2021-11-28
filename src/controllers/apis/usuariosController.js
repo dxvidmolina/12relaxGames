@@ -17,7 +17,7 @@ const usuariosController =
             },list:(req, res) => {
                     db.User.findAll()
                         .then(usuario => {
-                        res.json(usuario)
+                        res.json({data:usuario, total: usuario.length})
                         })
                         .catch(error => 
                         {console.log(error)})
