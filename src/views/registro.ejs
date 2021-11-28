@@ -58,11 +58,11 @@
             <input type="text" name="nickname" id="nickname">
             <div class='nombreValidacion' id='danger'></div>
 
-            <label for="edad"> Edad:</label>
+            <label for="edad"> (*)Edad:</label>
             <input type="text" name="edad" id="edad"> 
             <div class='edadValidacion' id='danger'></div>
             
-            <label for="pais"> País:</label>
+            <label for="pais"> (*)País:</label>
             <select name="pais" id="pais">k
                                
                 <option value="Argentina">Argentina</option>
@@ -77,8 +77,17 @@
                 <option value="Venezuela">Venezuela</option>
                 <option value="Guyana">Guyana</option>
 
-            </select>         
+            </select>  
 
+            <label for="categoria">(*)Categiria:</label>
+            <select name="categoria" id="categoria">
+
+                <option value="Seleccionar">Seleccionar una opción</option>
+                <option value="Comprador">Comprador</option>
+                <option value="Vendedor">Vendedor</option>
+
+            </select>
+            <div class='categoriaValidacion' id='danger'></div>
         </div>
     </div>
     <div class="errores">

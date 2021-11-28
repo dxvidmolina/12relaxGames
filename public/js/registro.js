@@ -70,6 +70,18 @@ inputEdad.addEventListener('keypress',(e)=>{
         passwordValidation1.innerHTML=''
     }
 
+    let edad = document.querySelector("#edad")
+    let edadValidation = document.querySelector("#edadValidacion")
+    if(edad.value!== "" || edad.value ){
+        (edadValidation.innerHTML="Debe poner una edad")
+    }
+
+    let categoria = document.querySelector("#categoria")
+    let categoriaValidacion = document.querySelector("#categoriaValidacion")
+    if(categoria.value== "Seleccionar"){
+        (categoriaValidacion.innerHTML="Debe seleccionar una categoria")
+    }
+
 })
 
 
