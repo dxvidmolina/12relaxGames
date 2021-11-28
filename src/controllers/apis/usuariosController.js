@@ -1,10 +1,7 @@
-/*
 const express = require('express');
-const sequelize = db.sequelize;
 const fs = require('fs');
 const path = require('path');
-const Usuario = require('../../models/User')
-let db= require("../../../database/models");
+const db= require("../../../database/models");
 
 
 const usuariosController =
@@ -18,8 +15,7 @@ const usuariosController =
                         .catch(error => 
                         {console.log(error)})     
             },list:(req, res) => {
-                    db.Usuario.findAll({
-                        include:[{association:"generos"}]})
+                    db.Usuario.findAll()
                         .then(usuario => {
                         res
                         .json(usuario)
@@ -29,4 +25,3 @@ const usuariosController =
                 }
             }
 module.exports= usuariosController;
-*/
