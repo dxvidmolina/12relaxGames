@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
+import Resumen from './Resumen'
 
 function App() {
   return (
     <React.Fragment>
       <div>
-        <p>
-          tonto
-        </p>
+        <Resumen />
       </div>
     </React.Fragment>
     

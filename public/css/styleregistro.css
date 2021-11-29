@@ -37,7 +37,8 @@ body{
     margin-top: 20px
 }
 
-.forms{
+.leftside{
+    border-radius: 2%;
     width: 150px;
     height: auto;
     display: flex;
@@ -50,11 +51,13 @@ body{
 }
 
 .leftside:hover{
+    border-radius: 0%;
     transition: 350ms;
     background-color: #8b8b8b;
 }
 
-.leftside{
+.rightside{
+    border-radius: 2%;
     width: 168px;
     display: flex;
     flex-direction: column;
@@ -66,13 +69,15 @@ body{
     margin: 20px;
 }
 
-.leftside:hover{
+.rightside:hover{
+    border-radius: 0%;
     transition: 450ms;
     background-color: #8b8b8b;
 
 }
 
 .botoncontinuar{
+    border-radius: 2%;
     width: 150px;
     height: 70px;
     font-size: 30px;
@@ -85,8 +90,9 @@ body{
 }
 
 .botoncontinuar:hover{
+    border-radius: 0%;
     transition: 450ms;
-    background-color: cyan ;
+    background-color: rgba(9, 255, 0, 0.863) ;
 }
 
 .errorForm{
