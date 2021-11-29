@@ -25,7 +25,7 @@ p{
     list-style: none;
     display: inline-block;
 }
-.junto{
+.todo{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +33,7 @@ p{
     background-color: rgba(0, 0, 0, 0.52);
     justify-content: center;
 }
-.junto a{
+.todo a{
     margin-top: 0.5em;
     display: flex;
     flex-direction: column;
@@ -42,7 +42,7 @@ p{
     color: #ace7e6;
     text-decoration: none;
 }
-.junto i{
+.todo i{
     display: flex;
     flex-direction: column;
     color: #ace7e6;
@@ -59,18 +59,18 @@ footer{
     *{
         font-size: 10px;
     }
-    .junto{
+    .todo{
         display: flex;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.52);
     }
-    .junto a{
+    .todo a{
         margin: 0 15px;
         font-size: 10px;
         color: #ace7e6;
         text-decoration: none;
     }
-    .junto i{
+    .todo i{
         color: #ace7e6;
         font-size: 20px;
         width: 1em;
