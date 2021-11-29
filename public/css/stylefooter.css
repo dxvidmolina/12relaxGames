@@ -53,6 +53,7 @@ footer{
     z-index: 4;
     margin-top: 10%;
     background-color: rgba(0, 0, 0, 0.178);
+    
 }
 @media (min-width:768px) {
     *{
