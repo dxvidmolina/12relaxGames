@@ -1,13 +1,16 @@
 const express= require ("express");
 const { check } = require("express-validator");
 const router= express.Router();
+let validationResult = [
+    check ('email').isEmail().withMessage('Ingrese un email válido'),
+    check('password'.isLength({min:8}).withMessage('La contraseña debe tener un mínimo de 8 caracteres'))
+]
 
 
 const loginController= require ("../controllers/loginController.js")
 
 router.get ("/", loginController.entrarLogin);
-router.post("/",[check ('email').isEmail().withMessage('Ingrese un email válido'),
-                check('password'.isLength({min:8}).withMessage('La contraseña debe tener un mínimo de 8 caracteres'))] ,loginController.processLogin);
+router.post("/", validationResult ,loginController.processLogin);
 router.get ('/check', function(req, res){
     if (req.session.userLogued == undefined) {
         res.send ("mal")

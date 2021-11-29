@@ -71,7 +71,7 @@ const productoController=
          list: function(req, res){
             db.Producto.findAll()
             .then(function(productos){
-             return res.render("lista", {productos : productos})
+             return res.send(productos)
             .catch(alert)
             })}
 }

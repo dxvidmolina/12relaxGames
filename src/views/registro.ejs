@@ -16,40 +16,50 @@
     <main>
         <div class="logo"> <img src="/images/Logo rxgames.png" alt=""></div>
     <div class="formularios">
+        <% if(locals.errors)  { %> 
+            <% errors.forEach(error => {  %> 
+                <p> <%= error.msg %> </p>
+            <% }) %> 
+        <% } %> 
+
         <form action="/registro" method="POST" >
         <div class="leftside">
             <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" required>
+            <input type="text" name="nombre" id="nombre" value=" <%= locals.old && old.nombre ? old.nombre : '' %> ">
 
             <label for="nickname">Nickname:</label>
-            <input type="text" name="nickname" id="nickname" required>
+            <input type="text" name="nickname" id="nickname">
 
             <label for="email1">Email:</label>
-            <input type="email" name="email1" id="email1" required>
+            <input type="email" name="email1" id="email1" value=" <%= locals.email1 && old.email1 ? old.email1 : '' %> ">
 
             <label for="email">Repita email:</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" value=" <%= locals.email && old.email ? old.email : '' %> ">
         </div>
         <div class="rightside">
             <label for="password1">Contraseña:</label>
-            <input type="password" name="password1" id="password1" required>
+            <input type="password" name="password1" id="password1" value=" <%= locals.password1 && old.password1 ? old.password1 : '' %> ">
 
             <label for="password">Confirmar :</label>
-            <input type="password" name="password" id="password" required>
+            <input type="password" name="password" id="password" value=" <%= locals.password && old.password ? old.password : '' %> ">
 
             <label for="pais"> País:</label>
-            <input type="text" name="pais" id="pais" required>
+            <input type="text" name="pais" id="pais">
         
             <label for="edad"> Edad:</label>
-            <input type="text" name="edad" id="edad" required>
+            <input type="text" name="edad" id="edad">
         </div>
     </div>
+
+    
+
     <div class="errorForm">
     <% if (typeof errorMessage != "undefined") { %>
         <p>El form no se pudo entregar por un error:</p>
         <p><%= errorMessage %></p>
     <% } %>
     </div>
+
 
 
     <div id="checkboxes">

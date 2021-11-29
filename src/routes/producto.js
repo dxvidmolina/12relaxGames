@@ -2,7 +2,7 @@ const express= require ("express");
 const router= express.Router();
 const productoController= require ("../controllers/productoController.js");
 const guestMiddleware = require("../middlewares/guestMiddleware.js");
-const authMiddleware = require("../middlewares/authMiddleware") 
+const authMiddleware = require("../middlewares/authMiddleware");
 
 router.get ("/lista",productoController.list)
 router.get ("/producto",productoController.entrarproducto);
