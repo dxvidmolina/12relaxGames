@@ -1,6 +1,11 @@
+*{  margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
 body{
-    background-image: url(/images/background.jpg);
-    background-size: 105%;
+    background-image: url(/images/wallpaperLogin.jpg);
+    background-size: 100vw;
     background-position: center;
     background-repeat:no-repeat;
     background-attachment: fixed;
@@ -24,7 +29,6 @@ body{
     display: none;
 }
 form{
-    background-color: rgba(155, 155, 155, 0.9);
     max-width: 450px;
     text-align: center;
     margin-left: auto;
@@ -36,11 +40,19 @@ form{
     margin-top: 10px;
 }
 
+#formularioo{
+    background-color: rgba(255, 255, 255, 0.356);
+    border-radius: 10px;
+}
+
+#label{
+    font-size: 10px;
+}
+
 .form-in{
     text-align: center;
     padding: 15px;
-    font-size: 20px;
-
+    font-size: 25px;
 
 } .form-in label{
     display: block;
@@ -75,6 +87,8 @@ button{
     
 }
 input{
+    width: 100%;
+    height: 40px;
     border-radius: 7px;
 }
 .text-danger{
@@ -88,6 +102,30 @@ input{
 }
 
 @media (min-width: 730px) {
+    a{  margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    #initionsession{
+        font-size: 20px;
+    }
+    body{
+        background-image: url(/images/16013.jpg);
+        background-size: 100vw;
+        background-position: center;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        font-family: roboto;
+    }
+    #formularioo{
+        background-color: rgba(255, 255, 255, 0.65);
+        border-radius: 10px;
+    }
+    label{
+        font-size: 20px;
+    }
+
     .main-navbar{
         display: flex;
         justify-content: space-around;
@@ -111,5 +149,15 @@ input{
     }
     h2{
         text-align: center;
+    }
+    footer{
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.178);
+        position:absolute;
+        bottom:0;
+        right: 0;
+        left: 0;
+        width:100%;
+        height: auto;
     }
 }

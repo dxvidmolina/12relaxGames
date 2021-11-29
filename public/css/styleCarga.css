@@ -13,42 +13,91 @@ body{
     background-attachment: fixed;
     margin: auto;
 }
+
 .inputs{
-    width: 100vw;
+    width: 75vw;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    background-color: rgb(245, 245, 245, 0.712);
+    position: relative;
+    left: 40px;
     text-align: center;
-    padding: 10px;
-}
-
-.inputs{
-    transition: 450ms;
-    background-color: rgba(245, 245, 245, 0);
-}
-
-.inputs h2{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-.inputs:hover{
-    transition: 450ms;
-    background-color: rgba(245, 245, 245, 0.808);
 }
 
 .inputs input{
-    margin: 20px;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.formContainer h2{
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(245, 245, 245, 0.712);
+}
+
+.inputs select{
+    width: 50%;
+    position: relative;
+    left: 5em;
+    margin: 1px;
 }
 #danger{
     color:red
 }
+footer{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.178);
+    position:absolute;
+    bottom:-5em;
+    right: 0;
+    left: 0;
+    width:100%;
+    height: auto;
+}
 
 
-@media (min-width: 360px){
+@media (min-width: 760px){
+    body{
+        background-image: url(/images/background2.jpg);
+        background-size: 150%;
+        background-position: center;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+    }
     .inputs{
+        width: 15vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         position: absolute;
-
+        left: 800px;
+    }
+    
+    .inputs input{
+        width: 85%;
+        font-size: 20px;
+        padding: 2px;
+    }
+    .inputs select{
+        width: 50%;
+        font: 20px;
+        position: absolute;
+        left: 30px;
+        
+        font-size: 20px;
+    }
+    .formContainer h2{
+        background-color: rgb(245, 255, 255);
+        font-size: 40px;
+        text-align: center;
+        padding: 1em;
+        margin: 1em;
+        width: auto;
     }
 }

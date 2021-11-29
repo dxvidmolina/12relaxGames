@@ -5,14 +5,82 @@
     font-family: 'Roboto', sans-serif;
     font-size: 10px;
 }
+
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:blueviolet;
+    opacity: .98;
+    font-size: 10px;
+    max-width: 100%;
+}
+.nav-links a:last-child{
+    margin-right: 0;
+}
+
+#HRcolor {
+    padding: 0%;
+    background-color: rgb(37, 12, 61);
+    height: 3px;
+    border-color: rgb(64, 21, 105);
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 10px;
+}
+.nav-links a{
+    margin-right: 2em;
+    text-decoration: none;
+    color: rgb(54, 0, 54);
+    font-weight: 700;
+    font-size: 1.7em;
+}
+.nav-links a:hover{
+    color: rgb(98, 0, 98);
+}
+.nav-links a i{
+    font-size: 1em;
+}
+.buscador{
+    margin-top: 2em;
+    font-size: 1em;
+    background-color: white;
+    border-radius: 5px;
+}
+.buscador input{
+    width: 30vw;
+    height: 2.5em;
+    margin-right: 1em;
+    border-radius: 5px;
+    border: 0px;
+}
+.buscador button{
+    transform: scale(1.5);
+    border: 0px;
+    margin-right: 5px ;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
 body::-webkit-scrollbar{
-    width: 0.50rem;
+    width: 2rem;
 }
 body::-webkit-scrollbar-track{
-    background: blueviolet;
+    background: #190087;;
 }
 body::-webkit-scrollbar-thumb{
-    background: rgb(187, 30, 226);
+    background: #A230ED;
 }
 .fondo{
     background-image: url(/images/Vaporwave-4K-Wallpapers.jpg);
@@ -28,7 +96,6 @@ nav{
     justify-content: center;
     align-items: center;
     background-color:blueviolet;
-    opacity: .7;
     font-size: 10px;
     width: 100%;
 }
@@ -73,26 +140,29 @@ nav{
 }
 .banner{
     background-image: url(/images/banner.PNG);
-    height: 20em;
-    width: 80vw;
-    margin-top: 6em;
-    border-radius: .5em;
+    width: 100vw;
+    margin-top: 1em;
     box-shadow: 0 0 1em black;
+
 }
+
 .banner-padre{
     display: flex;
     justify-content: center;
     font-size: 10px;
 }
 .titulo-padre{
-    font-size: 10px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
 }
 .titulo{
     text-align: left;
     background-color: blueviolet;
     display: inline-block;
-    margin-top: 6em;
-    margin-left: 2em;
+    margin-top: 2em;
+
     padding: 1em;
     border-radius: .5em;
     font-weight: 400;
@@ -104,28 +174,31 @@ nav{
     transform: scale(1.1);
 }
 .juegos-padre{
-    font-size: 10px;
+    display: flex;
+    justify-content: center;
 }
 .juegos{
-    font-size: 1em;
     display: flex;
-    justify-content: space-between;
-    margin-top: 6em;
-    align-items: center;
-
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-left: 1.2em;
 }
 .juegos img{
+    margin-top: 1em;
     box-shadow: 0 0 1.5em black;
-    transition-duration: .5s;
-    width: 100%;
+    transition-duration: .4s;
+    margin-left: 10px;
+    width: 10em;
     border-radius: 15px;
+    justify-content: center;
 }
 .juegos img:hover{
     transform: scale(1.1);
+    box-shadow: 0.5em 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.644);
 }
 
 .icono i{
-    font-size: 4em;
+    font-size: 2em;
     color: rgb(166, 84, 243);
     filter: drop-shadow(0 0 1.5em black);
     transition-duration: .3s;
@@ -137,20 +210,48 @@ nav{
 
 footer{
     width: 100%;
-    background-color: wheat;
 }
 
-@media (max-width:390px){
+@media (min-width:390px){
     *{
         font-size: 20px;
     }
+
+
     body{
         background-image: url(/images/Vaporwave-4K-Wallpapers.jpg);
         background-size: cover;
         background-position: center;
     }
 
-    .fondo{
-        display: none;
+    .banner{
+        background-image: url(/images/banner.PNG);
+        width: 40vw;
+        margin-top: 1em;
+        box-shadow: 0 0 1em black;
+        display: block;
     }
+
+    .juegos-padre{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .juegos{
+        width: 100vw;
+        margin-top: 1em;
+        margin-left: 3.5em;
+        margin-right: 3.5em;
+        padding-left: 22em;
+    }
+    .juegos img{
+        box-shadow: 0 0 1.5em black;
+        transition-duration: .5s;
+        width: 11vw;
+        margin-right: 1em;
+        margin-left: 1em;
+        border-radius: 8px;
+        justify-content: center;
+    }
+
 }
