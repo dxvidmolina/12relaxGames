@@ -38,11 +38,19 @@ const productoController =
                     })
                     
                 },destroy:(req, res) => {
-                    let products_copy = Products.getAll().filter(elem => elem.id != req.params.id);
+                    db.Producto.destroy({
+                        where: {id: req.params.id}
+                    }).then(function(){
+                        res.redirect('/products/lista')
+                    })
+
+
+
+                    /*let products_copy = Products.getAll().filter(elem => elem.id != req.params.id);
                     Products.modifiedAll(products_copy);
                     res.redirect('/');
 
-                },entrarproducto: (req,res)=>{
+                */},entrarproducto: (req,res)=>{
                     res.render("producto");   
 
                 },create: (req,res)=>{

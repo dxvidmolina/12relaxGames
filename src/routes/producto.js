@@ -1,6 +1,7 @@
 const express= require ("express");
 const router= express.Router();
 const productoController= require ("../controllers/productoController.js");
+const multer= require('multer');
 const guestMiddleware = require("../middlewares/guestMiddleware.js");
 const authMiddleware = require("../middlewares/authMiddleware") 
 const registerController= require ("../controllers/registerController.js");
@@ -21,6 +22,6 @@ router.post("/create", validateCreate, productoController.storage);
 router.get('/:id', productoController.detail);
 router.get('/edit/:id', productoController.edit);
 router.post('/edit/:id',productoController.upload);
-router.delete('/:id/delete', productoController.destroy)
+router.delete('/edit/:id', productoController.destroy)
 
 module.exports = router;

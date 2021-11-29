@@ -2,6 +2,7 @@ const express = require ("express");
 const router = express.Router();
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const registerController= require ("../controllers/registerController.js")
+const { body } = require("express-validator");
 
 const { check } = require("express-validator");
 const validateRegister =[

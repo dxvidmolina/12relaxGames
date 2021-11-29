@@ -70,11 +70,7 @@ article{
     align-items: center;
     margin-right: 15%;
 }
-button{
-    display: flex;
-    justify-content: space-around;
-    text-align: end;
-}
+
 .section2 {
 
     display: flex;

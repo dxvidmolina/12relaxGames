@@ -8,19 +8,7 @@
     font-size: 20px;
     border-radius: 9px;
     color: red;
-<<<<<<< HEAD
 }
 .wrong{
  border: solid 1px red;
-=======
-    border-color: red;
-
-}
-
-@media (min-width:768px){
-    .errores{
-        position: relative;
-        left: 44.8vw
-    }
->>>>>>> d1d70a81cb9f32bd6b8b1c9c669230b88a1d25e3
 }

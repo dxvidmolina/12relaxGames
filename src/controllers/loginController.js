@@ -1,19 +1,48 @@
 const User = require("../models/users.js")
 const bcryptjs = require("bcryptjs")
 const { validationResult } = require("express-validator")
+let db= require("../../database/models");
 const loginController=
     {entrarLogin:(req,res)=>{
         res.render("login")
     },
 
     processLogin: (req, res) => {
-        let errors = validationResult(req);
+        /*let errors = validationResult(req);
         if (errors.isEmpty){
 
         }else {
             return res.render('login', {errors: errors.errors})
+        }*/
+        let userToLogin= User.findOne({
+            where: {email:req.body.email}
+        }).then(function(e){
+            console.log= userToLogin
+        })
+        if(userToLogin){
+            let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if(passwordCorrect){
+                req.session.userLogged = userToLogin;
+                return res.redirect('/login/perfil')
+            }
+            return res.render('login',{
+                errors: {
+                    email: {
+                        msg: "Email o Contraseña son incorrectos"
+                    }
+                }
+            })
         }
-        let userToLogin = User.findByField('email', req.body.email);
+        req.session.userToLogin = userLogued;
+        return res.render('login',{
+            errors: {
+                email: {
+                    msg: "Email inválido"
+                }
+            }
+        })
+
+        /* let userToLogin = User.findByField('email', req.body.email);
 		if(userToLogin){
             let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if(passwordCorrect){
@@ -36,7 +65,7 @@ const loginController=
                     msg: "Email inválido"
                 }
             }
-        })
+        })*/
 		
 	},
     profile: (req,res)=>{
