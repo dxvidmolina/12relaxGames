@@ -11,40 +11,20 @@
         <link href="/css/styledetalle.css" rel="stylesheet">
     </head>
         <body>
-            <header>
-                <div class="navbar">
-                   <div class="main-navbar">
-                      <a href="#">Inicio <i class="fas fa-home"></i> </a>
-                      <a href="#">Ingresar <i class="fas fa-sign-in-alt"></i> </a>
-                      <a href="#">Perfil <i class="fas fa-user"></i> </a>
-                      <a href="#">Comunidad <i class="fas fa-users"></i> </a>
-                      <a href="#">Soporte <i class="fas fa-tools"></i> </a>
-                      <a href="#">Carrito <i class="fas fa-shopping-cart"></i></a>
-                   </div>
-                </div>
-            </header>
+            <%- include("./partials/header") %>
             <main>
                 <div class="todo">
                     <div class="contenedor">
                         <img src="/images/<%=producto.imgref%>"" alt="stylesheet">
-                        <div class="juego1">
-                            <img src="/images/<%=producto.imgref %>" alt="stylesheet">
-                            <img src="/images/<%=producto.imgref %>" alt="stylesheet">
-                            <img src="/images/<%=producto.imgref %>" alt="stylesheet">
-                            <img src="/images/<%=producto.imgref %>" alt="stylesheet">
-                            <img src="/images/<%=producto.imgref %>" alt="stylesheet">
-                        </div> 
+                        
                     </div>
-                    <div class="info-flex">
-                        <div class="informacion">
-                            <img src="/images/<%=producto.imgref %>" alt="stylesheet">
-                            <h2>INFORMACION</h2>
-                            <p><%=producto.description%></p>
-                            <div class="compra"> 
-                                <div class="oferta">%<%=producto.discount%></div>             
-                                <div class="precio"><%=producto.price%></div> 
-                                <div class="boton"><button>Comprar</button></div>
-                            </div>
+                    <div class="informacion">
+                        <h2>INFORMACION</h2>
+                        <p><%=producto.description%></p>
+                        <div class="compra"> 
+                            <div class="oferta">%<%=producto.discount%></div>             
+                            <div class="precio"><%=producto.price%></div> 
+                            <div class="boton"><button>Comprar</button></div>
                         </div>
                     </div>
                 </div>
