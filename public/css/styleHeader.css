@@ -5,10 +5,7 @@
     font-family: 'Roboto', sans-serif;
 }
 nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     background-color:blueviolet;
     opacity: .98;
     font-size: 10px;
@@ -16,14 +13,22 @@ nav{
 }
 .flex{
     display: flex;
-
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 10px;
+    max-width: 800px;
+    margin: auto;
+    align-items: center;
 
 }
-.nav-links a{
-    display: none;
-}
+
 .nav-links a:last-child{
     margin-right: 0;
+}
+.fa-bars{
+ font-size: 30px;
+ align-items: center;
+ padding-top: 15px;
 }
 
 #HRcolor {
@@ -34,17 +39,31 @@ nav{
 }
 .nav-links{
     display: flex;
+    flex-direction:column ;
     justify-content: center;
     margin-top: 1em;
     margin-bottom: 2em;
     font-size: 10px;
+    position: fixed;
+    top: 80px;
+    background-color:rgb(64, 21, 105);
+    width: 100%;
+    padding:40px;
+    justify-content: space-around;
+    right: 100%;
+    transition: right 0.5s;
+}
+.nav-links-mover{
+    right:0
 }
 .nav-links a{
-    margin-right: 2em;
+    display: block;
     text-decoration: none;
     color: rgb(54, 0, 54);
     font-weight: 700;
     font-size: 1.7em;
+    padding: 20px;
+    
 }
 .nav-links a:hover{
     color: rgb(98, 0, 98);
@@ -53,21 +72,49 @@ nav{
     font-size: 1em;
 }
 .buscador{
-    margin-top: 2em;
+    
     font-size: 1em;
     background-color: white;
     border-radius: 5px;
 }
 .buscador input{
-    width: 30vw;
+    
     height: 2.5em;
-    margin-right: 1em;
     border-radius: 5px;
     border: 0px;
+    width: 250px;
 }
 .buscador button{
     transform: scale(1.5);
     border: 0px;
     margin-right: 5px ;
     background-color: white;
+    
+}
+@media (min-width: 768px){
+    .fa-bars{
+        display: block;
+        display: none;
+    }
+    .buscador input{
+        width: 500px;
+        text-align: center;
+        margin-right: 250px;
+        height: 35px;
+    }
+    .nav-links a{
+        display: block;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-size: 10px;
+        position: inherit;
+        padding:0%;
+        margin:0%;
+        background-color:blueviolet;
+    }
 }
