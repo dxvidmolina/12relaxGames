@@ -1,12 +1,14 @@
 *{
     box-sizing: border-box;
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
 }
-p{
+p{  
+    font-size: 12px;
     text-align: center;
 }
 .parteArriba{
+
     margin-top: 15px;
     color: white;
     text-align: center;
@@ -16,37 +18,36 @@ p{
     font-size: 20px;
     list-style: none;
     display: inline-block;
-    margin-right: 20px;
+
 }
 .parteDerecha{
     font-size: 20px;
     list-style: none;
     display: inline-block;
-=======
-    list-style: none;
-    display: inline-block;
-    margin-right: 20px;
-}
-.parteDerecha{
-    font-size: 20px;
-    list-style: none;
-    display: inline-block;
-    margin-left: 20px;
 }
 .todo{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.52);
     justify-content: center;
-    padding: 10px;
 }
 .todo a{
-    margin: 0 15px;
-    color: white;
+    margin-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 10px;
+    color: #ace7e6;
+    text-decoration: none;
 }
 .todo i{
-    color: white;
-    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #ace7e6;
+    width: 1em;
+    display: none;
 }
 footer{
     z-index: 4;
@@ -55,6 +56,22 @@ footer{
 }
 @media (min-width:768px) {
     *{
-        font-size: 13px;
+        font-size: 10px;
+    }
+    .todo{
+        display: flex;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.52);
+    }
+    .todo a{
+        margin: 0 15px;
+        font-size: 10px;
+        color: #ace7e6;
+        text-decoration: none;
+    }
+    .todo i{
+        color: #ace7e6;
+        font-size: 20px;
+        width: 1em;
     }
 }

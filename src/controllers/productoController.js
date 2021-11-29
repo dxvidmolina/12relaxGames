@@ -82,4 +82,64 @@ const productoController =
                             .catch(error => {console.log(error)})
                 }
             }
+<<<<<<< HEAD
+            else{
+                res.redirect('/')
+            }
+        },
+            producto1:(req,res)=>{
+            res.render('home')
+        },
+            edit: (req, res) => {
+            let product = Products.findById(req.params.id)
+            res.render('productoform',{
+                productToEdit: product
+            });
+        },
+            upload: (req, res) => {
+            let products_copy = Products.getAll().map(product => {
+                    if (product.id == req.params.id) {
+                        product.nombreJuego = req.body.nombreJuego
+                        product.precio = req.body.precio
+                        product.detalleJuego = req.body.detalleJuego
+                        product.descuento = req.body.descuento
+                    }
+                    return product;
+                });
+    
+            Products.modifiedAll(products_copy);
+            res.redirect('/products/'+ req.params.id)
+    
+        },
+            destroy: (req, res) => {
+            let products_copy = Products.getAll().filter(elem => elem.id != req.params.id);
+            Products.modifiedAll(products_copy);
+            res.redirect('/');
+        },
+            entrarproducto: (req,res)=>{
+            res.render("producto");       
+        },  create: (req,res)=>{
+            res.render("crearProducto")
+        },
+             storage: function(req, res){
+                let arrayProductos = {
+                name: req.body.name,
+                price: req.body.price,
+                genre: req.body.genre,
+                desc: req.body.price,
+                img: req.body.img
+        }
+        res.redirect("crearProducto");
+    
+        },
+         list: function(req, res){
+            db.Producto.findAll()
+            .then(function(productos){
+             return res.send(productos)
+            .catch(alert)
+            })}
+}
+        
+=======
+>>>>>>> f98e92c0cbf7e8052d4111804a2432311d0312ca
 module.exports= productoController;
