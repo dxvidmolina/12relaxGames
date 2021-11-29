@@ -1,9 +1,14 @@
 <link href="/css/styleHeader.css" rel="stylesheet">
 <nav>
+    <div class='flex'>
     <div class="buscador">
         <form action="/busqueda" method=POST>
             <input type="text" class='paraBuscar' name='paraBuscar'> <button type="submit"><i class="fas fa-search"></i></button>
         </form>
+    </div>
+    <div>   
+        <i class="fas fa-bars"></i>
+    </div>
     </div>
     <div class="nav-links">
         <% if(locals.isLogged){ %>
@@ -20,6 +25,7 @@
             <a href="/registro"> <i class="fas fa-sign-in-alt"></i> Sign up</a>
             <% } %>
     </div>
+    
 </nav> 
 <hr id="HRcolor">
 
