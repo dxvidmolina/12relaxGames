@@ -5,5 +5,6 @@ const router = express.Router();
 const homeController = require("../controllers/homeController.js")
 
 router.get ("/", homeController.entrarHome);
+router.get ("/buendia", homeController.hola);
 
 module.exports = router;

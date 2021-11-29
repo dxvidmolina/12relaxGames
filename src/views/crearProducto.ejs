@@ -13,25 +13,51 @@
     <section>
         <div class=" inputs">
             <h2>Bienvenido a la sección de creación de productos</h2>
-            <form action="/producto/crearProducto" method="POST">
+            <form action="/products/create" method="POST">
                 <label for="name"></label>
-                    <input type="text" placeholder="Nombre del juego" name="name" id="">
+                    
+                    <div class="errores">
+                        <% if(locals.errores) { %>
+                            <% errores.forEach(error => { %> 
+                            <p> <%=error.msg%> </p>
+                        <% }) %>
+                        <% } %> 
+                    </div>
+
+                    <input type="text" placeholder="Nombre del juego" name="name" id="nombreJuego">
+                    <div class= 'nombreJuego'  id='danger'></div>
 
                 <label for="price"></label>
-                    <input type="number" placeholder="Precio" name="price" id="">
+                    <input type="number" placeholder="Precio" name="price" id="precio">
+                    <div class= 'precio'  id='danger'></div>
 
-                <label for="genre"></label>
-                    <input type="text" placeholder="Género" name="genre" id="">
+                <label for="descuento"></label>
+                    <input type="text" placeholder="descuento" name="descuento" id="descuento">
 
                 <label for="Desc"></label>
-                    <input type="text" placeholder="Desc. del producto" name="Desc" id="">
+                    <input type="text" placeholder="Desc. del producto" name="desc" id="description">
+                    <div class='description' id='danger'></div>
+                <select name="generos" id="generos">
+                    <option value="1">Accion</option>
+                    <option value="2">Disparos</option>
+                    <option value="3">Estrategia</option>
+                    <option value="4">SimulaciÃ³n</option>
+                    <option value="5">Deporte</option>
+                    <option value="6">Carreras</option>
+                    <option value="7">Aventura</option>
+                    <option value="8">Rol</option>
+                    <option value="9">Otro</option>
+
+
+                </select>
                     
                 <label for="img"></label>
-                    <input type="file" name="img" id="">
+                    <input type="file" name="img" id="img">
                     <p>Recuerda que solo puedes vender productos físicos en tu país(o ciudad)</p>
                     <input type="submit" name="submit" id="">
             </form>
         </div>
     </section>
+    <script src='/js/creatte.js'></script>
 </body>
 </html>

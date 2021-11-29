@@ -1,6 +1,10 @@
 <link href="/css/styleHeader.css" rel="stylesheet">
 <nav>
-    <div class="buscador"><input type="text"> <button type="submit"><i class="fas fa-search"></i></button></div>
+    <div class="buscador">
+        <form action="/busqueda" method=POST>
+            <input type="text" class='paraBuscar' name='paraBuscar'> <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
     <div class="nav-links">
 
         <% if(locals.isLogged){ %>

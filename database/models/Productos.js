@@ -6,44 +6,49 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
+            allowNull: false 
+        },
+        name:{
+            type: DataTypes.STRING,
+            allowNull: false 
+        },
+        price:{
+            type: DataTypes.INTEGER,
             allowNull: false
         },
-        Productos_date:{
-
-            type: DataTypes.DATE,
-            allowNull: false
-        } ,
-        Productos_descuento:{
-            type: DataTypes.INTEGER,
-            allowNull: false
-        } ,
-        Productos_nombre:{
-
+        description:{
             type: DataTypes.STRING,
             allowNull: false
-        } ,
-        Productos_precio:{
-
+        },
+        discount:{
             type: DataTypes.INTEGER,
             allowNull: false
-        } ,
-        Productos_img:{
-
-            type: DataTypes.STRING,
+        },
+        genre_id:{
+            type: DataTypes.INTEGER,
             allowNull: false
-        } ,
-        Detalle_producto:{
-
+        },
+        imgref:{
             type: DataTypes.STRING,
             allowNull: false
         }
-    };
-    let config = {
-        tableName: "productos",
-        timestamps: false
-    }
         
+
+    }
+    let config = {
+        tableName: 'productos',
+        timestamps:false
+    }
 const Producto = sequelize.define(alias, cols, config)
+
+Producto.associate = function(models){
+    Producto.belongsTo(models.Genres, {
+        as: "generos",
+        foreignKey: "genre_id"
+    }
+    )
+
+}
 
     return Producto;
 }
