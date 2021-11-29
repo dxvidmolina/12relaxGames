@@ -79,7 +79,7 @@ inputEdad.addEventListener('keypress',(e)=>{
     let categoria = document.querySelector("#categoria")
     let categoriaValidacion = document.querySelector("#categoriaValidacion")
     if(categoria.value== "Seleccionar"){
-        (categoriaValidacion.innerHTML="Debe seleccionar una categoria")
+        (e.preventDefault()) && (categoriaValidacion.innerHTML="Debe seleccionar una categoria")  
     }
 
 })
